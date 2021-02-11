@@ -1,0 +1,2 @@
+- ~~Récuperer les championnats majeurs~~
+- AMELIO: récupérer tous les championnats
