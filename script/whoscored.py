@@ -2,8 +2,10 @@
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
 
-from data_model import Team, Championnat
+from data_model import Club, Championnat
 from utils import serializeReportContent
 #from data_model import Team
 import time
@@ -13,11 +15,13 @@ import json
 
 
 def initDriver():
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    chrome_options = Options()
+    # chrome_options.add_argument('--headless')
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     return driver
 
 
-def getChampionnat():
+def getChampionnatsMajeurs():
     driver = initDriver()
     driver.get("https://www.whoscored.com/")
     time.sleep(2)
@@ -37,38 +41,56 @@ def getChampionnat():
 
     driver.close()
 
-    with open(os.path.join(os.path.dirname(__file__), 'output', 'championnat.json'), 'w') as outfile:
+    with open(os.path.join(os.path.dirname(__file__), 'output', 'championnats.json'), 'w') as outfile:
         json.dump(championnatListe, outfile, default=serializeReportContent)
 
+    return championnatListe
 
-def getAllTeamsLigue1():
-    # standings-18594
-    teams = []
+
+def getChampionnatsComplets():
     driver = initDriver()
-    driver.get("https://www.whoscored.com/Regions/74/Tournaments/22/France-Ligue-1")
+    driver.get("https://www.whoscored.com/")
     time.sleep(2)
-    teamsList = driver.find_elements_by_xpath("//*[@id='standings-18594-content']/tr[*]/td[*]/a[@class='team-link ']")
+    WebDriverWait(driver, 10)
+    championnat = driver.find_elements_by_xpath("//*[@type='text/javascript']")
+    #championnat = driver.find_elements_by_xpath("//*[@class='nav-region']")
+    print(championnat)
+    #print(championnat[0].text)
 
+
+def getClubs(name_championnat, url):
+    driver = initDriver()
+    driver.get(url)
+    time.sleep(2)
+
+    clubs = driver.find_elements_by_xpath("//*[contains(@id,'standings')][contains(@id,'content')]/tr[*]/td[*]/a[@class='team-link ']")
+
+    clubListe = []
     i = 0
-    while i < len(teamsList):
-        anchor = teamsList[i]
-        teamURL = anchor.get_attribute("href")
-        teamName = anchor.get_attribute("innerHTML")
+    while i < len(clubs):
+        curseur = clubs[i]
+        teamURL = curseur.get_attribute("href")
+        teamName = curseur.get_attribute("innerHTML")
         teamURL = teamURL.replace("/Show/","/Fixtures/")
-        teams.append(Team(teamName, teamURL))
+        clubListe.append(Club(teamName, teamURL))
 
         i += 1
+
     driver.close()
 
-    return teams
+    with open(os.path.join(os.path.dirname(__file__), 'output', '{}_clubs.json'.format(name_championnat)), 'w') as outfile:
+        json.dump(clubListe, outfile, default=serializeReportContent)
 
 
-def menu():
-    # teams = getAllTeamsLigue1()
+championnatListe = getChampionnatsMajeurs()
+for _ in championnatListe:
+    name = _._getName()
+    url = _._getWebURL()
+    getClubs(name, url)
 
-    champ = getChampionnat()
-    print('---')
-    getAllTeamsLigue1()
+
+# NON FONCTIONNEL getChampionnatsComplets()
+# getClubs("https://www.whoscored.com/Regions/252/Tournaments/2/England-Premier-League")
 
 
 """     for cham in champ:
@@ -76,6 +98,3 @@ def menu():
         print(cham.getWebURL())
         print('---')
 """
-
-
-menu()
