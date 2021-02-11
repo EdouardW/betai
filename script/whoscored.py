@@ -59,11 +59,17 @@ def getChampionnatsComplets():
         if 'var allRegions' in _.get_attribute("text"):
             global_bloc_text = _.get_attribute("text").replace('\n', '')
             final_bloc_text = re.findall('var\ allRegions\ \=\ \[(.*?)\]\;', global_bloc_text)
-
             detail_list = re.findall('type\:(.*?)},\{type\:',final_bloc_text[0])
-            
-            for i in detail_list:
-              print(i)
+
+            for bloc_pays in detail_list:
+              id_pays = re.findall('id\:(.*?)},', bloc_pays)
+              nom_pays = re.findall('name\:(.*?)},', bloc_pays)
+              bloc_competition = re.findall('tournaments\:\ \[(.*?)\},', bloc_pays)
+              print(id_pays)
+              print('---')
+              print(nom_pays)
+              print('---')
+              print(bloc_competition)
               print('---')
 
 
