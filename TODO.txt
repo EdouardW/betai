@@ -1,2 +1,3 @@
 - ~~Récuperer les championnats majeurs~~
 - AMELIO: récupérer tous les championnats
+- ~~test Sélenium SingletonClass -> à priori pas besoin 'Found in cache'

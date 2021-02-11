@@ -2,7 +2,7 @@
 
 class Team:
     name: str
-    WebUrl: str
+    WebURL: str
 
     def __init__(self, name, webURL):
         self.name = name
@@ -16,15 +16,17 @@ class Team:
 
 
 class Championnat:
+    pays: str
     name: str
-    WebUrl: str
+    WebURL: str
 
-    def __init__(self, name, webURL):
+    def __init__(self, pays, name, webURL):
+        self.pays = pays
         self.name = name
         self.webURL = webURL
 
-    def getName(self):
+    def _getName(self):
         return self.name
 
-    def getWebURL(self):
+    def _getWebURL(self):
         return self.webURL

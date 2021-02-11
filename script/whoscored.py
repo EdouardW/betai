@@ -4,10 +4,12 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
 from data_model import Team, Championnat
+from utils import serializeReportContent
 #from data_model import Team
 import time
 import sys
 import os
+import json
 
 
 def initDriver():
@@ -27,10 +29,16 @@ def getChampionnat():
     while i < len(championnat):
         curseur = championnat[i]
         championnatURL = curseur.get_attribute("href")
-        championnatNom = curseur.get_attribute("title")
-        championnatListe.append(Championnat(championnatNom, championnatURL))
+        championnatPays = curseur.get_attribute("title")
+        championnatNom = curseur.get_attribute("text")
+        championnatListe.append(Championnat(championnatPays, championnatNom, championnatURL))
+
+        i += 1
 
     driver.close()
+
+    with open(os.path.join(os.path.dirname(__file__), 'output', 'championnat.json'), 'w') as outfile:
+        json.dump(championnatListe, outfile, default=serializeReportContent)
 
 
 def getAllTeamsLigue1():
@@ -59,11 +67,13 @@ def menu():
     # teams = getAllTeamsLigue1()
 
     champ = getChampionnat()
+    print('---')
+    getAllTeamsLigue1()
 
-    for cham in champ:
+"""     for cham in champ:
         print(cham.getName())
-        print(cham.WebUrl())
-        print('---')
+        print(cham.getWebURL())
+        print('---') """
 
 
 menu()
