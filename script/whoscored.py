@@ -12,6 +12,7 @@ import time
 import sys
 import os
 import json
+import re
 
 
 def initDriver():
@@ -53,8 +54,21 @@ def getChampionnatsComplets():
     time.sleep(2)
     WebDriverWait(driver, 10)
     championnat = driver.find_elements_by_xpath("//*[@type='text/javascript']")
+
+    for _ in championnat:
+        if 'var allRegions' in _.get_attribute("text"):
+            global_bloc_text = _.get_attribute("text").replace('\n', '')
+            final_bloc_text = re.findall('var\ allRegions\ \=\ \[(.*?)\]\;', global_bloc_text)
+
+            detail_list = re.findall('type\:(.*?)},\{type\:',final_bloc_text[0])
+            
+            for i in detail_list:
+              print(i)
+              print('---')
+
+
     #championnat = driver.find_elements_by_xpath("//*[@class='nav-region']")
-    print(championnat)
+    # print(championnat[0].get_attribute("text"))
     #print(championnat[0].text)
 
 
@@ -82,14 +96,15 @@ def getClubs(name_championnat, url):
         json.dump(clubListe, outfile, default=serializeReportContent)
 
 
-championnatListe = getChampionnatsMajeurs()
+""" championnatListe = getChampionnatsMajeurs()
 for _ in championnatListe:
     name = _._getName()
     url = _._getWebURL()
-    getClubs(name, url)
+    getClubs(name, url) """
 
 
-# NON FONCTIONNEL getChampionnatsComplets()
+# NON FONCTIONNEL 
+getChampionnatsComplets()
 # getClubs("https://www.whoscored.com/Regions/252/Tournaments/2/England-Premier-League")
 
 

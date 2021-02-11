@@ -1,32 +1,32 @@
 #!/usr/bin/env python
 
-class Team:
-    name: str
+class Club:
+    nom: str
     WebURL: str
 
-    def __init__(self, name, webURL):
-        self.name = name
+    def __init__(self, nom, webURL):
+        self.name = nom
         self.webURL = webURL
 
-    def getName(self):
-        return self.name
+    def _getName(self):
+        return self.nom
 
-    def getWebURL(self):
+    def _getWebURL(self):
         return self.webURL
 
 
 class Championnat:
     pays: str
-    name: str
+    nom: str
     WebURL: str
 
-    def __init__(self, pays, name, webURL):
+    def __init__(self, pays, nom, webURL):
         self.pays = pays
-        self.name = name
+        self.nom = nom
         self.webURL = webURL
 
     def _getName(self):
-        return self.name
+        return self.nom
 
     def _getWebURL(self):
         return self.webURL
