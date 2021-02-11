@@ -3,7 +3,8 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
-from data_model import Team
+from data_model import Team, Championnat
+#from data_model import Team
 import time
 import sys
 import os
@@ -12,6 +13,24 @@ import os
 def initDriver():
     driver = webdriver.Chrome(ChromeDriverManager().install())
     return driver
+
+
+def getChampionnat():
+    driver = initDriver()
+    driver.get("https://www.whoscored.com/")
+    time.sleep(2)
+
+    championnat = driver.find_elements_by_xpath("//*[@id='popular-tournaments-list']/li[*]/a")
+
+    championnatListe = []
+    i = 0
+    while i < len(championnat):
+        curseur = championnat[i]
+        championnatURL = curseur.get_attribute("href")
+        championnatNom = curseur.get_attribute("title")
+        championnatListe.append(Championnat(championnatNom, championnatURL))
+
+    driver.close()
 
 
 def getAllTeamsLigue1():
@@ -37,46 +56,14 @@ def getAllTeamsLigue1():
 
 
 def menu():
-    teams = getAllTeamsLigue1()
-    for team in teams:
-        print (team.getName())
+    # teams = getAllTeamsLigue1()
+
+    champ = getChampionnat()
+
+    for cham in champ:
+        print(cham.getName())
+        print(cham.WebUrl())
         print('---')
-"""     print(teams) """
 
-"""     team = subMenuTeams(teams)
-    links = getAllLinksTeam(team.getWebURL())
-    getDataByLinks(links) """
-  
-"""   toQuit = False
-  option = 0
-  while not toQuit:
-    print ("1. Get JSON data entering team URL (e.g. https://www.whoscored.com/Teams/819/Show/Spain-Getafe)")
-    print ("2. Select team from LaLiga")
-    print ("3. Get JSON data entering single match (e.g. https://www.whoscored.com/Matches/1492131/Live/Spain-LaLiga-2020-2021-Athletic-Bilbao-Getafe)")
-    print ("4. Exit")
-    print ("Please, choose an option")
-    option = askNumber()
-
-    if option == 1:
-      url = str(input("URL: "))
-      links = getAllLinksTeam(url)
-      getDataByLinks(links)
-      print("Job finished")
-    elif option == 2:
-      teams = getAllTeamsLaLiga()
-      team = subMenuTeams(teams)
-      links = getAllLinksTeam(team.getWebURL())
-      getDataByLinks(links)
-      print("Job finished")
-    elif option == 3:
-      url = str(input("URL: "))
-      saveDataSingleMatch(url)
-      print("Job finished")
-    elif option == 4:
-      toQuit = True
-    else:
-      print ("Enter a number between 1 and 4")
-  print ("Bye")
-  sys.exit() """
 
 menu()
