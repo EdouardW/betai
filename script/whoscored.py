@@ -70,10 +70,12 @@ def menu():
     print('---')
     getAllTeamsLigue1()
 
+
 """     for cham in champ:
         print(cham.getName())
         print(cham.getWebURL())
-        print('---') """
+        print('---')
+"""
 
 
 menu()
