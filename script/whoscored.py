@@ -60,42 +60,32 @@ def getChampionnatsComplets():
         if 'var allRegions' in _.get_attribute("text"):
             global_bloc_text = _.get_attribute("text").replace('\n', '')
             final_bloc_text = re.findall('var\ allRegions\ \=\ \[(.*?)\]\;', global_bloc_text)
-            
-            ## Le code ici fait 1 fois sur 2
-            
-            detail_list = re.findall('type\:(.*?)},\{type\:',final_bloc_text[0])
-            print(final_bloc_text[0])
-"""             for i in detail_list:
-                print(i)
-                print('---') """
-"""             
+            detail_list = re.split('type\:', final_bloc_text[0])
 
-            final_bloc_text = re.findall('var\ allRegions\ \=\ \[(.*?)\]\;', global_bloc_text)
-            detail_list = re.findall('type\:(.*?)},\{type\:',final_bloc_text[0])
-
-            for bloc_pays in detail_list:
+            for bloc_pays in detail_list[1:]:
                 sous_bloc_general = re.findall('id\:(.*?)tournaments\:\ ', bloc_pays)
                 sous_bloc_tournoi = re.findall('tournaments\:\ \[(.*?)\]', bloc_pays)
 
-                id_pays = int(re.findall('\d+', sous_bloc_general[0]))
+                id_pays = int(re.findall(r'\d+', sous_bloc_general[0])[0])
                 nom_pays = re.findall('name\:\ (.*?),', sous_bloc_general[0])
 
                 for bloc in sous_bloc_tournoi:
                     bloc_championnat = re.findall('id:(.*?)\}', bloc)
+
                     for i in bloc_championnat:
                         id_championnat = int(re.search(r'\d+', i).group())
-                        url_championnat = re.findall('url\:\'(.*?)\',', i)
+                        url_championnat = os.path.join("https://www.whoscored.com", re.findall('url\:\'(.*?)\',', i)[0][1:])
                         nom_championnat = re.findall('name\:\'(.*?)\'', i)
 
-                championnatListe.append(Championnat(id_pays,
-                                                    nom_pays,
-                                                    id_championnat,
-                                                    nom_championnat,
-                                                    url_championnat,
-                                                    ))
+                        championnatListe.append(Championnat(id_pays,
+                                                            nom_pays,
+                                                            id_championnat,
+                                                            nom_championnat,
+                                                            url_championnat,
+                                                            ))
 
     with open(os.path.join(os.path.dirname(__file__), 'output', 'championnats_complets.json'), 'w') as outfile:
-        json.dump(championnatListe, outfile, default=serializeReportContent) """
+        json.dump(championnatListe, outfile, default=serializeReportContent)
 
 
 def getClubs(name_championnat, url):
