@@ -34,15 +34,19 @@ def getChampionnatsMajeurs():
     while i < len(championnat):
         curseur = championnat[i]
         championnatURL = curseur.get_attribute("href")
-        championnatPays = curseur.get_attribute("title")
-        championnatNom = curseur.get_attribute("text")
-        championnatListe.append(Championnat(championnatPays, championnatNom, championnatURL))
+        nom_championnat = curseur.get_attribute("title")
+        nom_pays = curseur.get_attribute("text")
+        championnatListe.append(Championnat(
+                                            nom_pays=nom_pays,
+                                            nom_championnat=nom_championnat,
+                                            webURL=championnatURL
+                                            ))
 
         i += 1
 
     driver.close()
 
-    with open(os.path.join(os.path.dirname(__file__), 'output', 'championnats.json'), 'w') as outfile:
+    with open(os.path.join(os.path.dirname(__file__), 'output', 'championnats_majeurs.json'), 'w') as outfile:
         json.dump(championnatListe, outfile, default=serializeReportContent)
 
     return championnatListe
@@ -112,15 +116,8 @@ def getClubs(name_championnat, url):
         json.dump(clubListe, outfile, default=serializeReportContent)
 
 
-""" championnatListe = getChampionnatsMajeurs()
-for _ in championnatListe:
-    name = _._getName()
-    url = _._getWebURL()
-    getClubs(name, url) """
-
-
-# NON FONCTIONNEL 
-getChampionnatsComplets()
+# getChampionnatsComplets()
+getChampionnatsMajeurs()
 # getClubs("https://www.whoscored.com/Regions/252/Tournaments/2/England-Premier-League")
 
 
