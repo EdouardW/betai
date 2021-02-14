@@ -15,10 +15,6 @@ class Club:
         return self.webURL
 
 
-class Pays:
-    id_pays: int
-    nom_pays: str
-
 class Championnat:
     id_pays: int
     nom_pays: str
@@ -26,7 +22,7 @@ class Championnat:
     nom_championnat: str
     WebURL: str
 
-    def __init__(self, id_pays='null', nom_pays='null', id_championnat='null', nom_championnat='null', webURL='null'):
+    def __init__(self, id_pays=None, nom_pays=None, id_championnat=None, nom_championnat=None, webURL=None):
         self.id_pays = id_pays
         self.nom_pays = nom_pays
         self.id_championnat = id_championnat

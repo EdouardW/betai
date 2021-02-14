@@ -71,7 +71,7 @@ def getChampionnatsComplets():
                 sous_bloc_tournoi = re.findall('tournaments\:\ \[(.*?)\]', bloc_pays)
 
                 id_pays = int(re.findall(r'\d+', sous_bloc_general[0])[0])
-                nom_pays = re.findall('name\:\ (.*?),', sous_bloc_general[0])
+                nom_pays = re.findall('name\:\ (.*?),', sous_bloc_general[0])[0]
 
                 for bloc in sous_bloc_tournoi:
                     bloc_championnat = re.findall('id:(.*?)\}', bloc)
@@ -79,7 +79,7 @@ def getChampionnatsComplets():
                     for i in bloc_championnat:
                         id_championnat = int(re.search(r'\d+', i).group())
                         url_championnat = os.path.join("https://www.whoscored.com", re.findall('url\:\'(.*?)\',', i)[0][1:])
-                        nom_championnat = re.findall('name\:\'(.*?)\'', i)
+                        nom_championnat = re.findall('name\:\'(.*?)\'', i)[0]
 
                         championnatListe.append(Championnat(id_pays,
                                                             nom_pays,
@@ -116,8 +116,8 @@ def getClubs(name_championnat, url):
         json.dump(clubListe, outfile, default=serializeReportContent)
 
 
-# getChampionnatsComplets()
-getChampionnatsMajeurs()
+getChampionnatsComplets()
+# getChampionnatsMajeurs()
 # getClubs("https://www.whoscored.com/Regions/252/Tournaments/2/England-Premier-League")
 
 
