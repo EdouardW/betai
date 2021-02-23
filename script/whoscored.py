@@ -34,8 +34,8 @@ def getChampionnatsMajeurs():
     while i < len(championnat):
         curseur = championnat[i]
         championnatURL = curseur.get_attribute("href")
-        nom_championnat = curseur.get_attribute("title")
-        nom_pays = curseur.get_attribute("text")
+        nom_pays = curseur.get_attribute("title")
+        nom_championnat = curseur.get_attribute("text")
         championnatListe.append(Championnat(
                                             nom_pays=nom_pays,
                                             nom_championnat=nom_championnat,
@@ -92,7 +92,7 @@ def getChampionnatsComplets():
         json.dump(championnatListe, outfile, default=serializeReportContent)
 
 
-def getClubs(name_championnat, url):
+def getClubs(nom_championnat, url):
     driver = initDriver()
     driver.get(url)
     time.sleep(2)
@@ -105,24 +105,29 @@ def getClubs(name_championnat, url):
         curseur = clubs[i]
         teamURL = curseur.get_attribute("href")
         teamName = curseur.get_attribute("innerHTML")
-        teamURL = teamURL.replace("/Show/","/Fixtures/")
+        #teamURL = teamURL.replace("/Show/","/Fixtures/")
         clubListe.append(Club(teamName, teamURL))
 
         i += 1
 
     driver.close()
 
-    with open(os.path.join(os.path.dirname(__file__), 'output', '{}_clubs.json'.format(name_championnat)), 'w') as outfile:
+    with open(os.path.join(os.path.dirname(__file__), 'output', '{}_clubs.json'.format(nom_championnat)), 'w') as outfile:
         json.dump(clubListe, outfile, default=serializeReportContent)
 
 
-getChampionnatsComplets()
+def getJoueurs(nom_equipe, url_equipe):
+    driver = initDriver()
+    driver.get(url_equipe)
+    time.sleep(2)
+
+    pass
+
+    # with open(os.path.join(os.path.dirname(__file__), 'output', '{}_effectifs.json'.format(nom_equipe)), 'w') as outfile:
+    #    json.dump(clubListe, outfile, default=serializeReportContent)
+
+
+# getChampionnatsComplets()
 # getChampionnatsMajeurs()
-# getClubs("https://www.whoscored.com/Regions/252/Tournaments/2/England-Premier-League")
-
-
-"""     for cham in champ:
-        print(cham.getName())
-        print(cham.getWebURL())
-        print('---')
-"""
+# getClubs("Ligue 1", "https://fr.whoscored.com/Regions/74/Tournaments/22/France-Ligue-1")
+#getJoueurs("Lens", "https://fr.whoscored.com/Teams/309/Show/France-Lens")
