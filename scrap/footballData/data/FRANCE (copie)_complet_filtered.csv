@@ -1,0 +1,918 @@
+file,journee,Date,HomeTeam,AwayTeam
+2018_1.csv,1.0,2018-08-10,Marseille,Toulouse
+2018_1.csv,1.0,2018-08-11,Angers,Nimes
+2018_1.csv,1.0,2018-08-11,Lille,Rennes
+2018_1.csv,1.0,2018-08-11,Montpellier,Dijon
+2018_1.csv,1.0,2018-08-11,Nantes,Monaco
+2018_1.csv,1.0,2018-08-11,Nice,Reims
+2018_1.csv,1.0,2018-08-11,St Etienne,Guingamp
+2018_1.csv,1.0,2018-08-12,Bordeaux,Strasbourg
+2018_1.csv,1.0,2018-08-12,Lyon,Amiens
+2018_1.csv,1.0,2018-08-12,Paris SG,Caen
+2018_1.csv,2.0,2018-08-17,Reims,Lyon
+2018_1.csv,2.0,2018-08-18,Rennes,Angers
+2018_1.csv,2.0,2018-08-18,Monaco,Lille
+2018_1.csv,2.0,2018-08-18,Guingamp,Paris SG
+2018_1.csv,2.0,2018-08-18,Amiens,Montpellier
+2018_1.csv,2.0,2018-08-18,Caen,Nice
+2018_1.csv,2.0,2018-08-18,Dijon,Nantes
+2018_1.csv,2.0,2018-08-19,Nimes,Marseille
+2018_1.csv,2.0,2018-08-19,Strasbourg,St Etienne
+2018_1.csv,2.0,2018-08-19,Toulouse,Bordeaux
+2018_1.csv,3.0,2018-08-24,Lyon,Strasbourg
+2018_1.csv,3.0,2018-08-25,Paris SG,Angers
+2018_1.csv,3.0,2018-08-25,Toulouse,Nimes
+2018_1.csv,3.0,2018-08-25,Nice,Dijon
+2018_1.csv,3.0,2018-08-25,Amiens,Reims
+2018_1.csv,3.0,2018-08-25,Montpellier,St Etienne
+2018_1.csv,3.0,2018-08-25,Nantes,Caen
+2018_1.csv,3.0,2018-08-26,Bordeaux,Monaco
+2018_1.csv,3.0,2018-08-26,Lille,Guingamp
+2018_1.csv,3.0,2018-08-26,Marseille,Rennes
+2018_1.csv,4.0,2018-08-31,Lyon,Nice
+2018_1.csv,4.0,2018-09-01,Strasbourg,Nantes
+2018_1.csv,4.0,2018-09-01,Reims,Montpellier
+2018_1.csv,4.0,2018-09-01,Nimes,Paris SG
+2018_1.csv,4.0,2018-09-01,Dijon,Caen
+2018_1.csv,4.0,2018-09-01,Angers,Lille
+2018_1.csv,4.0,2018-09-01,Guingamp,Toulouse
+2018_1.csv,4.0,2018-09-02,Monaco,Marseille
+2018_1.csv,4.0,2018-09-02,Rennes,Bordeaux
+2018_1.csv,4.0,2018-09-02,St Etienne,Amiens
+2018_1.csv,5.0,2018-09-14,Nice,Rennes
+2018_1.csv,5.0,2018-09-14,Paris SG,St Etienne
+2018_1.csv,5.0,2018-09-15,Montpellier,Strasbourg
+2018_1.csv,5.0,2018-09-15,Dijon,Angers
+2018_1.csv,5.0,2018-09-15,Toulouse,Monaco
+2018_1.csv,5.0,2018-09-15,Amiens,Lille
+2018_1.csv,5.0,2018-09-15,Caen,Lyon
+2018_1.csv,5.0,2018-09-16,Bordeaux,Nimes
+2018_1.csv,5.0,2018-09-16,Marseille,Guingamp
+2018_1.csv,5.0,2018-09-16,Nantes,Reims
+2018_1.csv,6.0,2018-09-21,Monaco,Nimes
+2018_1.csv,6.0,2018-09-22,Strasbourg,Amiens
+2018_1.csv,6.0,2018-09-22,Reims,Dijon
+2018_1.csv,6.0,2018-09-22,St Etienne,Caen
+2018_1.csv,6.0,2018-09-22,Lille,Nantes
+2018_1.csv,6.0,2018-09-22,Angers,Toulouse
+2018_1.csv,6.0,2018-09-22,Montpellier,Nice
+2018_1.csv,6.0,2018-09-23,Guingamp,Bordeaux
+2018_1.csv,6.0,2018-09-23,Lyon,Marseille
+2018_1.csv,6.0,2018-09-23,Rennes,Paris SG
+2018_1.csv,7.0,2018-09-25,Monaco,Angers
+2018_1.csv,7.0,2018-09-25,Nantes,Nice
+2018_1.csv,7.0,2018-09-25,Toulouse,St Etienne
+2018_1.csv,7.0,2018-09-26,Marseille,Strasbourg
+2018_1.csv,7.0,2018-09-26,Nimes,Guingamp
+2018_1.csv,7.0,2018-09-26,Dijon,Lyon
+2018_1.csv,7.0,2018-09-26,Paris SG,Reims
+2018_1.csv,7.0,2018-09-26,Bordeaux,Lille
+2018_1.csv,7.0,2018-09-26,Amiens,Rennes
+2018_1.csv,7.0,2018-09-26,Caen,Montpellier
+2018_1.csv,8.0,2018-09-28,St Etienne,Monaco
+2018_1.csv,8.0,2018-09-29,Angers,Guingamp
+2018_1.csv,8.0,2018-09-29,Caen,Amiens
+2018_1.csv,8.0,2018-09-29,Lyon,Nantes
+2018_1.csv,8.0,2018-09-29,Nice,Paris SG
+2018_1.csv,8.0,2018-09-29,Reims,Bordeaux
+2018_1.csv,8.0,2018-09-29,Strasbourg,Dijon
+2018_1.csv,8.0,2018-09-30,Lille,Marseille
+2018_1.csv,8.0,2018-09-30,Montpellier,Nimes
+2018_1.csv,8.0,2018-09-30,Rennes,Toulouse
+2018_1.csv,9.0,2018-10-05,Toulouse,Nice
+2018_1.csv,9.0,2018-10-06,Amiens,Dijon
+2018_1.csv,9.0,2018-10-06,Angers,Strasbourg
+2018_1.csv,9.0,2018-10-06,Guingamp,Montpellier
+2018_1.csv,9.0,2018-10-06,Lille,St Etienne
+2018_1.csv,9.0,2018-10-06,Nimes,Reims
+2018_1.csv,9.0,2018-10-07,Bordeaux,Nantes
+2018_1.csv,9.0,2018-10-07,Marseille,Caen
+2018_1.csv,9.0,2018-10-07,Monaco,Rennes
+2018_1.csv,9.0,2018-10-07,Paris SG,Lyon
+2018_1.csv,10.0,2018-10-19,Lyon,Nimes
+2018_1.csv,10.0,2018-10-20,Strasbourg,Monaco
+2018_1.csv,10.0,2018-10-20,Reims,Angers
+2018_1.csv,10.0,2018-10-20,Paris SG,Amiens
+2018_1.csv,10.0,2018-10-20,Nantes,Toulouse
+2018_1.csv,10.0,2018-10-20,Dijon,Lille
+2018_1.csv,10.0,2018-10-20,Caen,Guingamp
+2018_1.csv,10.0,2018-10-21,Montpellier,Bordeaux
+2018_1.csv,10.0,2018-10-21,Nice,Marseille
+2018_1.csv,10.0,2018-10-21,St Etienne,Rennes
+2018_1.csv,11.0,2018-10-26,Nimes,St Etienne
+2018_1.csv,11.0,2018-10-27,Monaco,Dijon
+2018_1.csv,11.0,2018-10-27,Lille,Caen
+2018_1.csv,11.0,2018-10-27,Toulouse,Montpellier
+2018_1.csv,11.0,2018-10-27,Angers,Lyon
+2018_1.csv,11.0,2018-10-27,Amiens,Nantes
+2018_1.csv,11.0,2018-10-27,Guingamp,Strasbourg
+2018_1.csv,11.0,2018-10-28,Bordeaux,Nice
+2018_1.csv,11.0,2018-10-28,Marseille,Paris SG
+2018_1.csv,11.0,2018-10-28,Rennes,Reims
+2018_1.csv,12.0,2018-11-02,Paris SG,Lille
+2018_1.csv,12.0,2018-11-03,Strasbourg,Toulouse
+2018_1.csv,12.0,2018-11-03,Caen,Rennes
+2018_1.csv,12.0,2018-11-03,Dijon,Nimes
+2018_1.csv,12.0,2018-11-03,Lyon,Bordeaux
+2018_1.csv,12.0,2018-11-03,Nice,Amiens
+2018_1.csv,12.0,2018-11-03,Reims,Monaco
+2018_1.csv,12.0,2018-11-04,St Etienne,Angers
+2018_1.csv,12.0,2018-11-04,Montpellier,Marseille
+2018_1.csv,12.0,2018-11-04,Nantes,Guingamp
+2018_1.csv,13.0,2018-11-09,Lille,Strasbourg
+2018_1.csv,13.0,2018-11-10,Angers,Montpellier
+2018_1.csv,13.0,2018-11-10,Guingamp,Lyon
+2018_1.csv,13.0,2018-11-10,Nimes,Nice
+2018_1.csv,13.0,2018-11-10,St Etienne,Reims
+2018_1.csv,13.0,2018-11-10,Toulouse,Amiens
+2018_1.csv,13.0,2018-11-11,Rennes,Nantes
+2018_1.csv,13.0,2018-11-11,Monaco,Paris SG
+2018_1.csv,13.0,2018-11-11,Marseille,Dijon
+2018_1.csv,13.0,2018-11-11,Bordeaux,Caen
+2018_1.csv,14.0,2018-11-23,Lyon,St Etienne
+2018_1.csv,14.0,2018-11-24,Caen,Monaco
+2018_1.csv,14.0,2018-11-24,Dijon,Bordeaux
+2018_1.csv,14.0,2018-11-24,Nantes,Angers
+2018_1.csv,14.0,2018-11-24,Paris SG,Toulouse
+2018_1.csv,14.0,2018-11-24,Reims,Guingamp
+2018_1.csv,14.0,2018-11-24,Strasbourg,Nimes
+2018_1.csv,14.0,2018-11-25,Montpellier,Rennes
+2018_1.csv,14.0,2018-11-25,Amiens,Marseille
+2018_1.csv,14.0,2018-11-25,Nice,Lille
+2018_1.csv,15.0,2018-11-30,St Etienne,Nantes
+2018_1.csv,15.0,2018-12-01,Angers,Caen
+2018_1.csv,15.0,2018-12-01,Guingamp,Nice
+2018_1.csv,15.0,2018-12-01,Lille,Lyon
+2018_1.csv,15.0,2018-12-01,Monaco,Montpellier
+2018_1.csv,15.0,2018-12-01,Nimes,Amiens
+2018_1.csv,15.0,2018-12-02,Bordeaux,Paris SG
+2018_1.csv,15.0,2018-12-02,Marseille,Reims
+2018_1.csv,15.0,2018-12-02,Rennes,Strasbourg
+2018_1.csv,15.0,2018-12-02,Toulouse,Dijon
+2018_1.csv,16.0,2018-12-04,Nice,Angers
+2018_1.csv,16.0,2018-12-04,Montpellier,Lille
+2018_1.csv,16.0,2018-12-04,Amiens,Monaco
+2018_1.csv,16.0,2018-12-05,Bordeaux,St Etienne
+2018_1.csv,16.0,2018-12-05,Caen,Nimes
+2018_1.csv,16.0,2018-12-05,Dijon,Guingamp
+2018_1.csv,16.0,2018-12-05,Lyon,Rennes
+2018_1.csv,16.0,2018-12-05,Nantes,Marseille
+2018_1.csv,16.0,2018-12-05,Reims,Toulouse
+2018_1.csv,16.0,2018-12-05,Strasbourg,Paris SG
+2018_1.csv,17.0,2018-12-08,Guingamp,Amiens
+2018_1.csv,17.0,2018-12-08,Rennes,Dijon
+2018_1.csv,17.0,2018-12-09,Strasbourg,Caen
+2018_1.csv,17.0,2018-12-09,Lille,Reims
+2018_1.csv,17.0,2018-12-15,Reims,Strasbourg
+2018_1.csv,17.0,2018-12-16,Lyon,Monaco
+2018_1.csv,17.0,2018-12-16,Nice,St Etienne
+2018_1.csv,17.0,2018-12-16,Nimes,Lille
+2018_1.csv,17.0,2018-12-18,Caen,Toulouse
+2018_1.csv,17.0,2018-12-22,Reims,Caen
+2018_1.csv,18.0,2018-12-22,Strasbourg,Nice
+2018_1.csv,18.0,2018-12-22,St Etienne,Dijon
+2018_1.csv,18.0,2018-12-22,Rennes,Nimes
+2018_1.csv,18.0,2018-12-22,Paris SG,Nantes
+2018_1.csv,18.0,2018-12-22,Montpellier,Lyon
+2018_1.csv,18.0,2018-12-22,Monaco,Guingamp
+2018_1.csv,18.0,2018-12-22,Lille,Toulouse
+2018_1.csv,18.0,2018-12-22,Angers,Marseille
+2018_1.csv,18.0,2018-12-23,Bordeaux,Amiens
+2018_1.csv,18.0,2019-01-08,Amiens,Angers
+2018_1.csv,19.0,2019-01-08,Nantes,Montpellier
+2018_1.csv,19.0,2019-01-11,Caen,Lille
+2018_1.csv,19.0,2019-01-11,Lyon,Reims
+2018_1.csv,19.0,2019-01-12,Guingamp,St Etienne
+2018_1.csv,19.0,2019-01-12,Nice,Bordeaux
+2018_1.csv,19.0,2019-01-12,Amiens,Paris SG
+2018_1.csv,19.0,2019-01-13,Nantes,Rennes
+2018_1.csv,19.0,2019-01-13,Toulouse,Strasbourg
+2018_1.csv,19.0,2019-01-13,Dijon,Montpellier
+2018_1.csv,19.0,2019-01-13,Marseille,Monaco
+2018_1.csv,20.0,2019-01-15,Angers,Bordeaux
+2018_1.csv,20.0,2019-01-16,Guingamp,Rennes
+2018_1.csv,20.0,2019-01-16,Monaco,Nice
+2018_1.csv,20.0,2019-01-16,Nimes,Nantes
+2018_1.csv,20.0,2019-01-16,St Etienne,Marseille
+2018_1.csv,20.0,2019-01-16,Toulouse,Lyon
+2018_1.csv,20.0,2019-01-18,Lille,Amiens
+2018_1.csv,20.0,2019-01-19,Reims,Nice
+2018_1.csv,20.0,2019-01-19,Paris SG,Guingamp
+2018_1.csv,20.0,2019-01-19,Nimes,Toulouse
+2018_1.csv,21.0,2019-01-19,Monaco,Strasbourg
+2018_1.csv,21.0,2019-01-20,Angers,Nantes
+2018_1.csv,21.0,2019-01-20,Bordeaux,Dijon
+2018_1.csv,21.0,2019-01-20,Caen,Marseille
+2018_1.csv,21.0,2019-01-20,Rennes,Montpellier
+2018_1.csv,21.0,2019-01-20,St Etienne,Lyon
+2018_1.csv,21.0,2019-01-23,Nimes,Angers
+2018_1.csv,21.0,2019-01-25,Marseille,Lille
+2018_1.csv,21.0,2019-01-26,Strasbourg,Bordeaux
+2018_1.csv,21.0,2019-01-26,Nice,Nimes
+2018_1.csv,22.0,2019-01-26,Guingamp,Reims
+2018_1.csv,22.0,2019-01-26,Dijon,Monaco
+2018_1.csv,22.0,2019-01-27,Amiens,Lyon
+2018_1.csv,22.0,2019-01-27,Montpellier,Caen
+2018_1.csv,22.0,2019-01-27,Paris SG,Rennes
+2018_1.csv,22.0,2019-01-27,Toulouse,Angers
+2018_1.csv,22.0,2019-01-30,Nantes,St Etienne
+2018_1.csv,22.0,2019-02-01,Lille,Nice
+2018_1.csv,22.0,2019-02-02,Rennes,Amiens
+2018_1.csv,22.0,2019-02-02,Reims,Marseille
+2018_1.csv,23.0,2019-02-02,Angers,Dijon
+2018_1.csv,23.0,2019-02-02,Monaco,Toulouse
+2018_1.csv,23.0,2019-02-03,Lyon,Paris SG
+2018_1.csv,23.0,2019-02-03,Nimes,Montpellier
+2018_1.csv,23.0,2019-02-05,Marseille,Bordeaux
+2018_1.csv,23.0,2019-02-08,Dijon,Marseille
+2018_1.csv,23.0,2019-02-09,Amiens,Caen
+2018_1.csv,23.0,2019-02-09,Paris SG,Bordeaux
+2018_1.csv,23.0,2019-02-09,Strasbourg,Angers
+2018_1.csv,23.0,2019-02-10,Rennes,St Etienne
+2018_1.csv,24.0,2019-02-10,Nice,Lyon
+2018_1.csv,24.0,2019-02-10,Toulouse,Reims
+2018_1.csv,24.0,2019-02-10,Montpellier,Monaco
+2018_1.csv,24.0,2019-02-10,Nantes,Nimes
+2018_1.csv,24.0,2019-02-10,Guingamp,Lille
+2018_1.csv,24.0,2019-02-13,Caen,Nantes
+2018_1.csv,24.0,2019-02-13,St Etienne,Strasbourg
+2018_1.csv,24.0,2019-02-15,Lyon,Guingamp
+2018_1.csv,24.0,2019-02-15,Nimes,Dijon
+2018_1.csv,24.0,2019-02-16,Angers,Nice
+2018_1.csv,25.0,2019-02-16,Marseille,Amiens
+2018_1.csv,25.0,2019-02-16,Monaco,Nantes
+2018_1.csv,25.0,2019-02-17,Lille,Montpellier
+2018_1.csv,25.0,2019-02-17,St Etienne,Paris SG
+2018_1.csv,25.0,2019-02-17,Reims,Rennes
+2018_1.csv,25.0,2019-02-17,Caen,Strasbourg
+2018_1.csv,25.0,2019-02-17,Bordeaux,Toulouse
+2018_1.csv,25.0,2019-02-20,Bordeaux,Guingamp
+2018_1.csv,25.0,2019-02-20,Paris SG,Montpellier
+2018_1.csv,25.0,2019-02-22,Dijon,St Etienne
+2018_1.csv,26.0,2019-02-22,Strasbourg,Lille
+2018_1.csv,26.0,2019-02-23,Amiens,Nice
+2018_1.csv,26.0,2019-02-23,Guingamp,Angers
+2018_1.csv,26.0,2019-02-23,Paris SG,Nimes
+2018_1.csv,26.0,2019-02-24,Rennes,Marseille
+2018_1.csv,26.0,2019-02-24,Toulouse,Caen
+2018_1.csv,26.0,2019-02-24,Nantes,Bordeaux
+2018_1.csv,26.0,2019-02-24,Monaco,Lyon
+2018_1.csv,26.0,2019-02-24,Montpellier,Reims
+2018_1.csv,26.0,2019-03-02,Angers,Monaco
+2018_1.csv,27.0,2019-03-02,Caen,Paris SG
+2018_1.csv,27.0,2019-03-02,Reims,Amiens
+2018_1.csv,27.0,2019-03-03,Guingamp,Nantes
+2018_1.csv,27.0,2019-03-03,Lille,Dijon
+2018_1.csv,27.0,2019-03-03,Lyon,Toulouse
+2018_1.csv,27.0,2019-03-03,Marseille,St Etienne
+2018_1.csv,27.0,2019-03-03,Nice,Strasbourg
+2018_1.csv,27.0,2019-03-05,Bordeaux,Montpellier
+2018_1.csv,27.0,2019-03-09,Strasbourg,Lyon
+2018_1.csv,27.0,2019-03-09,Monaco,Bordeaux
+2018_1.csv,28.0,2019-03-09,Amiens,Nimes
+2018_1.csv,28.0,2019-03-09,Dijon,Reims
+2018_1.csv,28.0,2019-03-10,Marseille,Nice
+2018_1.csv,28.0,2019-03-10,Montpellier,Angers
+2018_1.csv,28.0,2019-03-10,Rennes,Caen
+2018_1.csv,28.0,2019-03-10,St Etienne,Lille
+2018_1.csv,28.0,2019-03-10,Toulouse,Guingamp
+2018_1.csv,28.0,2019-03-12,Dijon,Paris SG
+2018_1.csv,28.0,2019-03-15,Nice,Toulouse
+2018_1.csv,28.0,2019-03-15,Lille,Monaco
+2018_1.csv,29.0,2019-03-16,Guingamp,Dijon
+2018_1.csv,29.0,2019-03-16,Nimes,Strasbourg
+2018_1.csv,29.0,2019-03-16,Angers,Amiens
+2018_1.csv,29.0,2019-03-16,Caen,St Etienne
+2018_1.csv,29.0,2019-03-17,Bordeaux,Rennes
+2018_1.csv,29.0,2019-03-17,Lyon,Montpellier
+2018_1.csv,29.0,2019-03-17,Paris SG,Marseille
+2018_1.csv,29.0,2019-03-17,Reims,Nantes
+2018_1.csv,29.0,2019-03-29,Rennes,Lyon
+2018_1.csv,29.0,2019-03-30,Marseille,Angers
+2018_1.csv,30.0,2019-03-31,Toulouse,Paris SG
+2018_1.csv,30.0,2019-03-31,Monaco,Caen
+2018_1.csv,30.0,2019-03-31,Nantes,Lille
+2018_1.csv,30.0,2019-03-31,Amiens,Bordeaux
+2018_1.csv,30.0,2019-03-31,Dijon,Nice
+2018_1.csv,30.0,2019-04-01,St Etienne,Nimes
+2018_1.csv,30.0,2019-04-03,Montpellier,Guingamp
+2018_1.csv,30.0,2019-04-03,Strasbourg,Reims
+2018_1.csv,30.0,2019-04-05,Bordeaux,Marseille
+2018_1.csv,30.0,2019-04-06,Amiens,St Etienne
+2018_1.csv,31.0,2019-04-06,Angers,Rennes
+2018_1.csv,31.0,2019-04-06,Guingamp,Monaco
+2018_1.csv,31.0,2019-04-06,Lyon,Dijon
+2018_1.csv,31.0,2019-04-06,Nimes,Caen
+2018_1.csv,31.0,2019-04-07,Toulouse,Nantes
+2018_1.csv,31.0,2019-04-07,Reims,Lille
+2018_1.csv,31.0,2019-04-07,Paris SG,Strasbourg
+2018_1.csv,31.0,2019-04-07,Nice,Montpellier
+2018_1.csv,31.0,2019-04-09,Nimes,Rennes
+2018_1.csv,31.0,2019-04-12,Dijon,Amiens
+2018_1.csv,32.0,2019-04-12,Nantes,Lyon
+2018_1.csv,32.0,2019-04-13,Caen,Angers
+2018_1.csv,32.0,2019-04-13,Marseille,Nimes
+2018_1.csv,32.0,2019-04-13,Monaco,Reims
+2018_1.csv,32.0,2019-04-13,Strasbourg,Guingamp
+2018_1.csv,32.0,2019-04-14,Rennes,Nice
+2018_1.csv,32.0,2019-04-14,St Etienne,Bordeaux
+2018_1.csv,32.0,2019-04-14,Lille,Paris SG
+2018_1.csv,32.0,2019-04-14,Montpellier,Toulouse
+2018_1.csv,32.0,2019-04-17,Nantes,Paris SG
+2018_1.csv,33.0,2019-04-19,Dijon,Rennes
+2018_1.csv,33.0,2019-04-19,Lyon,Angers
+2018_1.csv,33.0,2019-04-20,Guingamp,Marseille
+2018_1.csv,33.0,2019-04-20,Nice,Caen
+2018_1.csv,33.0,2019-04-20,Nimes,Bordeaux
+2018_1.csv,33.0,2019-04-20,Strasbourg,Montpellier
+2018_1.csv,33.0,2019-04-21,Reims,St Etienne
+2018_1.csv,33.0,2019-04-21,Nantes,Amiens
+2018_1.csv,33.0,2019-04-21,Paris SG,Monaco
+2018_1.csv,33.0,2019-04-21,Toulouse,Lille
+2018_1.csv,34.0,2019-04-26,Bordeaux,Lyon
+2018_1.csv,34.0,2019-04-28,Amiens,Strasbourg
+2018_1.csv,34.0,2019-04-28,Angers,Reims
+2018_1.csv,34.0,2019-04-28,Caen,Dijon
+2018_1.csv,34.0,2019-04-28,Lille,Nimes
+2018_1.csv,34.0,2019-04-28,Marseille,Nantes
+2018_1.csv,34.0,2019-04-28,Nice,Guingamp
+2018_1.csv,34.0,2019-04-28,St Etienne,Toulouse
+2018_1.csv,34.0,2019-04-30,Montpellier,Paris SG
+2018_1.csv,34.0,2019-05-01,Rennes,Monaco
+2018_1.csv,35.0,2019-05-03,Strasbourg,Marseille
+2018_1.csv,35.0,2019-05-04,Reims,Nimes
+2018_1.csv,35.0,2019-05-04,Paris SG,Nice
+2018_1.csv,35.0,2019-05-04,Bordeaux,Angers
+2018_1.csv,35.0,2019-05-04,Guingamp,Caen
+2018_1.csv,35.0,2019-05-05,Lyon,Lille
+2018_1.csv,35.0,2019-05-05,Monaco,St Etienne
+2018_1.csv,35.0,2019-05-05,Montpellier,Amiens
+2018_1.csv,35.0,2019-05-05,Nantes,Dijon
+2018_1.csv,35.0,2019-05-05,Toulouse,Rennes
+2018_1.csv,36.0,2019-05-10,St Etienne,Montpellier
+2018_1.csv,36.0,2019-05-11,Nimes,Monaco
+2018_1.csv,36.0,2019-05-11,Dijon,Strasbourg
+2018_1.csv,36.0,2019-05-11,Nice,Nantes
+2018_1.csv,36.0,2019-05-11,Angers,Paris SG
+2018_1.csv,36.0,2019-05-11,Amiens,Toulouse
+2018_1.csv,36.0,2019-05-11,Caen,Reims
+2018_1.csv,36.0,2019-05-12,Lille,Bordeaux
+2018_1.csv,36.0,2019-05-12,Marseille,Lyon
+2018_1.csv,36.0,2019-05-12,Rennes,Guingamp
+2018_1.csv,37.0,2019-05-18,Toulouse,Marseille
+2018_1.csv,37.0,2019-05-18,Strasbourg,Rennes
+2018_1.csv,37.0,2019-05-18,St Etienne,Nice
+2018_1.csv,37.0,2019-05-18,Montpellier,Nantes
+2018_1.csv,37.0,2019-05-18,Paris SG,Dijon
+2018_1.csv,37.0,2019-05-18,Lyon,Caen
+2018_1.csv,37.0,2019-05-18,Lille,Angers
+2018_1.csv,37.0,2019-05-18,Guingamp,Nimes
+2018_1.csv,37.0,2019-05-18,Bordeaux,Reims
+2018_1.csv,37.0,2019-05-18,Monaco,Amiens
+2018_1.csv,38.0,2019-05-24,Reims,Paris SG
+2018_1.csv,38.0,2019-05-24,Amiens,Guingamp
+2018_1.csv,38.0,2019-05-24,Angers,St Etienne
+2018_1.csv,38.0,2019-05-24,Caen,Bordeaux
+2018_1.csv,38.0,2019-05-24,Dijon,Toulouse
+2018_1.csv,38.0,2019-05-24,Marseille,Montpellier
+2018_1.csv,38.0,2019-05-24,Nantes,Strasbourg
+2018_1.csv,38.0,2019-05-24,Nice,Monaco
+2018_1.csv,38.0,2019-05-24,Nimes,Lyon
+2018_1.csv,38.0,2019-05-24,Rennes,Lille
+2020_1.csv,1.0,2020-08-21,Bordeaux,Nantes
+2020_1.csv,1.0,2020-08-22,Dijon,Angers
+2020_1.csv,1.0,2020-08-22,Lille,Rennes
+2020_1.csv,1.0,2020-08-23,Monaco,Reims
+2020_1.csv,1.0,2020-08-23,Lorient,Strasbourg
+2020_1.csv,1.0,2020-08-23,Nimes,Brest
+2020_1.csv,1.0,2020-08-23,Nice,Lens
+2020_1.csv,1.0,2020-08-28,Lyon,Dijon
+2020_1.csv,1.0,2020-08-29,Rennes,Montpellier
+2020_1.csv,1.0,2020-08-29,Strasbourg,Nice
+2020_1.csv,2.0,2020-08-30,Brest,Marseille
+2020_1.csv,2.0,2020-08-30,Nantes,Nimes
+2020_1.csv,2.0,2020-08-30,St Etienne,Lorient
+2020_1.csv,2.0,2020-08-30,Angers,Bordeaux
+2020_1.csv,2.0,2020-08-30,Reims,Lille
+2020_1.csv,2.0,2020-08-30,Metz,Monaco
+2020_1.csv,2.0,2020-09-10,Lens,Paris SG
+2020_1.csv,2.0,2020-09-11,Bordeaux,Lyon
+2020_1.csv,2.0,2020-09-12,Montpellier,Nice
+2020_1.csv,2.0,2020-09-12,St Etienne,Strasbourg
+2020_1.csv,3.0,2020-09-13,Paris SG,Marseille
+2020_1.csv,3.0,2020-09-13,Monaco,Nantes
+2020_1.csv,3.0,2020-09-13,Nimes,Rennes
+2020_1.csv,3.0,2020-09-13,Angers,Reims
+2020_1.csv,3.0,2020-09-13,Dijon,Brest
+2020_1.csv,3.0,2020-09-13,Lille,Metz
+2020_1.csv,3.0,2020-09-13,Lorient,Lens
+2020_1.csv,3.0,2020-09-15,Montpellier,Lyon
+2020_1.csv,3.0,2020-09-16,Paris SG,Metz
+2020_1.csv,3.0,2020-09-17,Marseille,St Etienne
+2020_1.csv,4.0,2020-09-18,Lyon,Nimes
+2020_1.csv,4.0,2020-09-19,Lens,Bordeaux
+2020_1.csv,4.0,2020-09-19,Rennes,Monaco
+2020_1.csv,4.0,2020-09-20,Nice,Paris SG
+2020_1.csv,4.0,2020-09-20,Brest,Lorient
+2020_1.csv,4.0,2020-09-20,Metz,Reims
+2020_1.csv,4.0,2020-09-20,Montpellier,Angers
+2020_1.csv,4.0,2020-09-20,Strasbourg,Dijon
+2020_1.csv,4.0,2020-09-20,Nantes,St Etienne
+2020_1.csv,4.0,2020-09-20,Marseille,Lille
+2020_1.csv,5.0,2020-09-25,Lille,Nantes
+2020_1.csv,5.0,2020-09-26,St Etienne,Rennes
+2020_1.csv,5.0,2020-09-26,Marseille,Metz
+2020_1.csv,5.0,2020-09-27,Reims,Paris SG
+2020_1.csv,5.0,2020-09-27,Lorient,Lyon
+2020_1.csv,5.0,2020-09-27,Nimes,Lens
+2020_1.csv,5.0,2020-09-27,Monaco,Strasbourg
+2020_1.csv,5.0,2020-09-27,Dijon,Montpellier
+2020_1.csv,5.0,2020-09-27,Angers,Brest
+2020_1.csv,5.0,2020-09-27,Bordeaux,Nice
+2020_1.csv,6.0,2020-10-02,Paris SG,Angers
+2020_1.csv,6.0,2020-10-03,Lens,St Etienne
+2020_1.csv,6.0,2020-10-03,Nice,Nantes
+2020_1.csv,6.0,2020-10-04,Montpellier,Nimes
+2020_1.csv,6.0,2020-10-04,Bordeaux,Dijon
+2020_1.csv,6.0,2020-10-04,Brest,Monaco
+2020_1.csv,6.0,2020-10-04,Metz,Lorient
+2020_1.csv,6.0,2020-10-04,Strasbourg,Lille
+2020_1.csv,6.0,2020-10-04,Rennes,Reims
+2020_1.csv,6.0,2020-10-04,Lyon,Marseille
+2020_1.csv,7.0,2020-10-16,Dijon,Rennes
+2020_1.csv,7.0,2020-10-16,Nimes,Paris SG
+2020_1.csv,7.0,2020-10-17,Marseille,Bordeaux
+2020_1.csv,7.0,2020-10-17,Reims,Lorient
+2020_1.csv,7.0,2020-10-18,Strasbourg,Lyon
+2020_1.csv,7.0,2020-10-18,Angers,Metz
+2020_1.csv,7.0,2020-10-18,Monaco,Montpellier
+2020_1.csv,7.0,2020-10-18,Nantes,Brest
+2020_1.csv,7.0,2020-10-18,St Etienne,Nice
+2020_1.csv,7.0,2020-10-18,Lille,Lens
+2020_1.csv,8.0,2020-10-23,Rennes,Angers
+2020_1.csv,8.0,2020-10-24,Lorient,Marseille
+2020_1.csv,8.0,2020-10-24,Paris SG,Dijon
+2020_1.csv,8.0,2020-10-25,Nice,Lille
+2020_1.csv,8.0,2020-10-25,Montpellier,Reims
+2020_1.csv,8.0,2020-10-25,Lyon,Monaco
+2020_1.csv,8.0,2020-10-25,Brest,Strasbourg
+2020_1.csv,8.0,2020-10-25,Bordeaux,Nimes
+2020_1.csv,8.0,2020-10-25,Metz,St Etienne
+2020_1.csv,8.0,2020-10-31,Rennes,Brest
+2020_1.csv,9.0,2020-10-31,Nantes,Paris SG
+2020_1.csv,9.0,2020-11-01,Lille,Lyon
+2020_1.csv,9.0,2020-11-01,Monaco,Bordeaux
+2020_1.csv,9.0,2020-11-01,Reims,Strasbourg
+2020_1.csv,9.0,2020-11-01,Nimes,Metz
+2020_1.csv,9.0,2020-11-01,Angers,Nice
+2020_1.csv,9.0,2020-11-01,St Etienne,Montpellier
+2020_1.csv,9.0,2020-11-01,Dijon,Lorient
+2020_1.csv,9.0,2020-11-06,Strasbourg,Marseille
+2020_1.csv,9.0,2020-11-07,Bordeaux,Montpellier
+2020_1.csv,10.0,2020-11-07,Paris SG,Rennes
+2020_1.csv,10.0,2020-11-08,Nice,Monaco
+2020_1.csv,10.0,2020-11-08,Lyon,St Etienne
+2020_1.csv,10.0,2020-11-08,Nimes,Angers
+2020_1.csv,10.0,2020-11-08,Lens,Reims
+2020_1.csv,10.0,2020-11-08,Lorient,Nantes
+2020_1.csv,10.0,2020-11-08,Metz,Dijon
+2020_1.csv,10.0,2020-11-08,Brest,Lille
+2020_1.csv,10.0,2020-11-20,Rennes,Bordeaux
+2020_1.csv,10.0,2020-11-20,Monaco,Paris SG
+2020_1.csv,11.0,2020-11-21,Brest,St Etienne
+2020_1.csv,11.0,2020-11-22,Nantes,Metz
+2020_1.csv,11.0,2020-11-22,Dijon,Lens
+2020_1.csv,11.0,2020-11-22,Montpellier,Strasbourg
+2020_1.csv,11.0,2020-11-22,Reims,Nimes
+2020_1.csv,11.0,2020-11-22,Angers,Lyon
+2020_1.csv,11.0,2020-11-22,Lille,Lorient
+2020_1.csv,11.0,2020-11-25,Lens,Nantes
+2020_1.csv,11.0,2020-11-27,Strasbourg,Rennes
+2020_1.csv,11.0,2020-11-28,Marseille,Nantes
+2020_1.csv,12.0,2020-11-28,Paris SG,Bordeaux
+2020_1.csv,12.0,2020-11-29,Lyon,Reims
+2020_1.csv,12.0,2020-11-29,Lens,Angers
+2020_1.csv,12.0,2020-11-29,Lorient,Montpellier
+2020_1.csv,12.0,2020-11-29,Metz,Brest
+2020_1.csv,12.0,2020-11-29,Monaco,Nimes
+2020_1.csv,12.0,2020-11-29,Nice,Dijon
+2020_1.csv,12.0,2020-11-29,St Etienne,Lille
+2020_1.csv,12.0,2020-12-04,Nimes,Marseille
+2020_1.csv,12.0,2020-12-05,Rennes,Lens
+2020_1.csv,13.0,2020-12-05,Montpellier,Paris SG
+2020_1.csv,13.0,2020-12-06,Nantes,Strasbourg
+2020_1.csv,13.0,2020-12-06,Dijon,St Etienne
+2020_1.csv,13.0,2020-12-06,Reims,Nice
+2020_1.csv,13.0,2020-12-06,Angers,Lorient
+2020_1.csv,13.0,2020-12-06,Lille,Monaco
+2020_1.csv,13.0,2020-12-06,Bordeaux,Brest
+2020_1.csv,13.0,2020-12-06,Metz,Lyon
+2020_1.csv,13.0,2020-12-11,St Etienne,Angers
+2020_1.csv,13.0,2020-12-12,Marseille,Monaco
+2020_1.csv,14.0,2020-12-12,Lens,Montpellier
+2020_1.csv,14.0,2020-12-13,Nice,Rennes
+2020_1.csv,14.0,2020-12-13,Brest,Reims
+2020_1.csv,14.0,2020-12-13,Lorient,Nimes
+2020_1.csv,14.0,2020-12-13,Nantes,Dijon
+2020_1.csv,14.0,2020-12-13,Strasbourg,Metz
+2020_1.csv,14.0,2020-12-13,Lille,Bordeaux
+2020_1.csv,14.0,2020-12-13,Paris SG,Lyon
+2020_1.csv,14.0,2020-12-16,Rennes,Marseille
+2020_1.csv,14.0,2020-12-16,Paris SG,Lorient
+2020_1.csv,15.0,2020-12-16,Lyon,Brest
+2020_1.csv,15.0,2020-12-16,Bordeaux,St Etienne
+2020_1.csv,15.0,2020-12-16,Monaco,Lens
+2020_1.csv,15.0,2020-12-16,Nimes,Nice
+2020_1.csv,15.0,2020-12-16,Montpellier,Metz
+2020_1.csv,15.0,2020-12-16,Dijon,Lille
+2020_1.csv,15.0,2020-12-16,Angers,Strasbourg
+2020_1.csv,15.0,2020-12-16,Reims,Nantes
+2020_1.csv,15.0,2020-12-19,Metz,Lens
+2020_1.csv,15.0,2020-12-19,Marseille,Reims
+2020_1.csv,16.0,2020-12-19,Nice,Lyon
+2020_1.csv,16.0,2020-12-20,Lille,Paris SG
+2020_1.csv,16.0,2020-12-20,Lorient,Rennes
+2020_1.csv,16.0,2020-12-20,Strasbourg,Bordeaux
+2020_1.csv,16.0,2020-12-20,Dijon,Monaco
+2020_1.csv,16.0,2020-12-20,Nantes,Angers
+2020_1.csv,16.0,2020-12-20,Brest,Montpellier
+2020_1.csv,16.0,2020-12-20,St Etienne,Nimes
+2020_1.csv,16.0,2020-12-23,Lyon,Nantes
+2020_1.csv,16.0,2020-12-23,Paris SG,Strasbourg
+2020_1.csv,17.0,2020-12-23,Montpellier,Lille
+2020_1.csv,17.0,2020-12-23,Monaco,St Etienne
+2020_1.csv,17.0,2020-12-23,Angers,Marseille
+2020_1.csv,17.0,2020-12-23,Nimes,Dijon
+2020_1.csv,17.0,2020-12-23,Nice,Lorient
+2020_1.csv,17.0,2020-12-23,Lens,Brest
+2020_1.csv,17.0,2020-12-23,Bordeaux,Reims
+2020_1.csv,17.0,2020-12-23,Rennes,Metz
+2020_1.csv,17.0,2021-01-06,St Etienne,Paris SG
+2020_1.csv,17.0,2021-01-06,Reims,Dijon
+2020_1.csv,18.0,2021-01-06,Marseille,Montpellier
+2020_1.csv,18.0,2021-01-06,Lyon,Lens
+2020_1.csv,18.0,2021-01-06,Lille,Angers
+2020_1.csv,18.0,2021-01-06,Nantes,Rennes
+2020_1.csv,18.0,2021-01-06,Metz,Bordeaux
+2020_1.csv,18.0,2021-01-06,Lorient,Monaco
+2020_1.csv,18.0,2021-01-06,Brest,Nice
+2020_1.csv,18.0,2021-01-06,Strasbourg,Nimes
+2020_1.csv,18.0,2021-01-09,Nimes,Lille
+2020_1.csv,18.0,2021-01-09,Rennes,Lyon
+2020_1.csv,19.0,2021-01-09,Reims,St Etienne
+2020_1.csv,19.0,2021-01-09,Paris SG,Brest
+2020_1.csv,19.0,2021-01-09,Montpellier,Nantes
+2020_1.csv,19.0,2021-01-09,Bordeaux,Lorient
+2020_1.csv,19.0,2021-01-09,Metz,Nice
+2020_1.csv,19.0,2021-01-09,Lens,Strasbourg
+2020_1.csv,19.0,2021-01-09,Dijon,Marseille
+2020_1.csv,19.0,2021-01-09,Monaco,Angers
+2020_1.csv,19.0,2021-01-15,Montpellier,Monaco
+2020_1.csv,19.0,2021-01-16,Marseille,Nimes
+2020_1.csv,20.0,2021-01-16,Angers,Paris SG
+2020_1.csv,20.0,2021-01-17,Lille,Reims
+2020_1.csv,20.0,2021-01-17,Lyon,Metz
+2020_1.csv,20.0,2021-01-17,Strasbourg,St Etienne
+2020_1.csv,20.0,2021-01-17,Nice,Bordeaux
+2020_1.csv,20.0,2021-01-17,Nantes,Lens
+2020_1.csv,20.0,2021-01-17,Brest,Rennes
+2020_1.csv,20.0,2021-01-20,Marseille,Lens
+2020_1.csv,20.0,2021-01-22,Paris SG,Montpellier
+2020_1.csv,20.0,2021-01-23,Lens,Nice
+2020_1.csv,21.0,2021-01-23,Monaco,Marseille
+2020_1.csv,21.0,2021-01-24,Bordeaux,Angers
+2020_1.csv,21.0,2021-01-24,Dijon,Strasbourg
+2020_1.csv,21.0,2021-01-24,Metz,Nantes
+2020_1.csv,21.0,2021-01-24,Reims,Brest
+2020_1.csv,21.0,2021-01-24,Rennes,Lille
+2020_1.csv,21.0,2021-01-24,St Etienne,Lyon
+2020_1.csv,21.0,2021-01-27,Lorient,Dijon
+2020_1.csv,21.0,2021-01-29,Lyon,Bordeaux
+2020_1.csv,21.0,2021-01-30,Montpellier,Lens
+2020_1.csv,22.0,2021-01-31,Nice,St Etienne
+2020_1.csv,22.0,2021-01-31,Angers,Nimes
+2020_1.csv,22.0,2021-01-31,Brest,Metz
+2020_1.csv,22.0,2021-01-31,Lorient,Paris SG
+2020_1.csv,22.0,2021-01-31,Strasbourg,Reims
+2020_1.csv,22.0,2021-01-31,Lille,Dijon
+2020_1.csv,22.0,2021-01-31,Nantes,Monaco
+2020_1.csv,22.0,2021-02-03,Paris SG,Nimes
+2020_1.csv,22.0,2021-02-03,Monaco,Nice
+2020_1.csv,22.0,2021-02-03,Lens,Marseille
+2020_1.csv,23.0,2021-02-03,Dijon,Lyon
+2020_1.csv,23.0,2021-02-03,St Etienne,Nantes
+2020_1.csv,23.0,2021-02-03,Rennes,Lorient
+2020_1.csv,23.0,2021-02-03,Reims,Angers
+2020_1.csv,23.0,2021-02-03,Metz,Montpellier
+2020_1.csv,23.0,2021-02-03,Bordeaux,Lille
+2020_1.csv,23.0,2021-02-03,Strasbourg,Brest
+2020_1.csv,23.0,2021-02-06,Lorient,Reims
+2020_1.csv,23.0,2021-02-06,Lyon,Strasbourg
+2020_1.csv,23.0,2021-02-06,Lens,Rennes
+2020_1.csv,24.0,2021-02-07,Brest,Bordeaux
+2020_1.csv,24.0,2021-02-07,Montpellier,Dijon
+2020_1.csv,24.0,2021-02-07,Nice,Angers
+2020_1.csv,24.0,2021-02-07,Nimes,Monaco
+2020_1.csv,24.0,2021-02-07,St Etienne,Metz
+2020_1.csv,24.0,2021-02-07,Nantes,Lille
+2020_1.csv,24.0,2021-02-07,Marseille,Paris SG
+2020_1.csv,24.0,2021-02-13,Reims,Lens
+2020_1.csv,24.0,2021-02-13,Lyon,Montpellier
+2020_1.csv,24.0,2021-02-13,Paris SG,Nice
+2020_1.csv,25.0,2021-02-14,Monaco,Lorient
+2020_1.csv,25.0,2021-02-14,Angers,Nantes
+2020_1.csv,25.0,2021-02-14,Dijon,Nimes
+2020_1.csv,25.0,2021-02-14,Metz,Strasbourg
+2020_1.csv,25.0,2021-02-14,Rennes,St Etienne
+2020_1.csv,25.0,2021-02-14,Lille,Brest
+2020_1.csv,25.0,2021-02-14,Bordeaux,Marseille
+2020_1.csv,25.0,2021-02-17,Marseille,Nice
+2020_1.csv,25.0,2021-02-19,Brest,Lyon
+2020_1.csv,25.0,2021-02-20,St Etienne,Reims
+2020_1.csv,26.0,2021-02-20,Nantes,Marseille
+2020_1.csv,26.0,2021-02-21,Strasbourg,Angers
+2020_1.csv,26.0,2021-02-21,Nimes,Bordeaux
+2020_1.csv,26.0,2021-02-21,Lorient,Lille
+2020_1.csv,26.0,2021-02-21,Lens,Dijon
+2020_1.csv,26.0,2021-02-21,Montpellier,Rennes
+2020_1.csv,26.0,2021-02-21,Nice,Metz
+2020_1.csv,26.0,2021-02-21,Paris SG,Monaco
+2019_1.csv,1.0,2019-08-09,Monaco,Lyon
+2019_1.csv,1.0,2019-08-10,Marseille,Reims
+2019_1.csv,1.0,2019-08-10,Angers,Bordeaux
+2019_1.csv,1.0,2019-08-10,Brest,Toulouse
+2019_1.csv,1.0,2019-08-10,Dijon,St Etienne
+2019_1.csv,1.0,2019-08-10,Montpellier,Rennes
+2019_1.csv,1.0,2019-08-10,Nice,Amiens
+2019_1.csv,1.0,2019-08-11,Lille,Nantes
+2019_1.csv,1.0,2019-08-11,Strasbourg,Metz
+2019_1.csv,1.0,2019-08-11,Paris SG,Nimes
+2019_1.csv,2.0,2019-08-16,Lyon,Angers
+2019_1.csv,2.0,2019-08-17,Nimes,Nice
+2019_1.csv,2.0,2019-08-17,Metz,Monaco
+2019_1.csv,2.0,2019-08-17,Toulouse,Dijon
+2019_1.csv,2.0,2019-08-17,Amiens,Lille
+2019_1.csv,2.0,2019-08-17,Nantes,Marseille
+2019_1.csv,2.0,2019-08-17,Bordeaux,Montpellier
+2019_1.csv,2.0,2019-08-18,St Etienne,Brest
+2019_1.csv,2.0,2019-08-18,Reims,Strasbourg
+2019_1.csv,2.0,2019-08-18,Rennes,Paris SG
+2019_1.csv,3.0,2019-08-24,Brest,Reims
+2019_1.csv,3.0,2019-08-24,Dijon,Bordeaux
+2019_1.csv,3.0,2019-08-24,Amiens,Nantes
+2019_1.csv,3.0,2019-08-24,Angers,Metz
+2019_1.csv,3.0,2019-08-25,Monaco,Nimes
+2019_1.csv,3.0,2019-08-25,Strasbourg,Rennes
+2019_1.csv,3.0,2019-08-25,Paris SG,Toulouse
+2019_1.csv,3.0,2019-08-27,Montpellier,Lyon
+2019_1.csv,3.0,2019-08-28,Lille,St Etienne
+2019_1.csv,3.0,2019-08-28,Nice,Marseille
+2019_1.csv,4.0,2019-08-30,Metz,Paris SG
+2019_1.csv,4.0,2019-08-31,Toulouse,Amiens
+2019_1.csv,4.0,2019-08-31,Nimes,Brest
+2019_1.csv,4.0,2019-08-31,Angers,Dijon
+2019_1.csv,4.0,2019-08-31,Lyon,Bordeaux
+2019_1.csv,4.0,2019-08-31,Nantes,Montpellier
+2019_1.csv,4.0,2019-09-01,Reims,Lille
+2019_1.csv,4.0,2019-09-01,Rennes,Nice
+2019_1.csv,4.0,2019-09-01,Strasbourg,Monaco
+2019_1.csv,4.0,2019-09-01,Marseille,St Etienne
+2019_1.csv,5.0,2019-09-13,Lille,Angers
+2019_1.csv,5.0,2019-09-13,Amiens,Lyon
+2019_1.csv,5.0,2019-09-14,Paris SG,Strasbourg
+2019_1.csv,5.0,2019-09-14,Bordeaux,Metz
+2019_1.csv,5.0,2019-09-14,Brest,Rennes
+2019_1.csv,5.0,2019-09-14,Dijon,Nimes
+2019_1.csv,5.0,2019-09-14,Montpellier,Nice
+2019_1.csv,5.0,2019-09-15,Monaco,Marseille
+2019_1.csv,5.0,2019-09-15,Nantes,Reims
+2019_1.csv,5.0,2019-09-15,St Etienne,Toulouse
+2019_1.csv,6.0,2019-09-20,Strasbourg,Nantes
+2019_1.csv,6.0,2019-09-21,Marseille,Montpellier
+2019_1.csv,6.0,2019-09-21,Bordeaux,Brest
+2019_1.csv,6.0,2019-09-21,Metz,Amiens
+2019_1.csv,6.0,2019-09-21,Nice,Dijon
+2019_1.csv,6.0,2019-09-21,Nimes,Toulouse
+2019_1.csv,6.0,2019-09-21,Reims,Monaco
+2019_1.csv,6.0,2019-09-22,Rennes,Lille
+2019_1.csv,6.0,2019-09-22,Angers,St Etienne
+2019_1.csv,6.0,2019-09-22,Lyon,Paris SG
+2019_1.csv,7.0,2019-09-24,Dijon,Marseille
+2019_1.csv,7.0,2019-09-24,Monaco,Nice
+2019_1.csv,7.0,2019-09-25,St Etienne,Metz
+2019_1.csv,7.0,2019-09-25,Toulouse,Angers
+2019_1.csv,7.0,2019-09-25,Nantes,Rennes
+2019_1.csv,7.0,2019-09-25,Paris SG,Reims
+2019_1.csv,7.0,2019-09-25,Lille,Strasbourg
+2019_1.csv,7.0,2019-09-25,Amiens,Bordeaux
+2019_1.csv,7.0,2019-09-25,Montpellier,Nimes
+2019_1.csv,7.0,2019-09-25,Brest,Lyon
+2019_1.csv,8.0,2019-09-28,Lyon,Nantes
+2019_1.csv,8.0,2019-09-28,Bordeaux,Paris SG
+2019_1.csv,8.0,2019-09-28,Angers,Amiens
+2019_1.csv,8.0,2019-09-28,Metz,Toulouse
+2019_1.csv,8.0,2019-09-28,Nice,Lille
+2019_1.csv,8.0,2019-09-28,Reims,Dijon
+2019_1.csv,8.0,2019-09-28,Monaco,Brest
+2019_1.csv,8.0,2019-09-29,Strasbourg,Montpellier
+2019_1.csv,8.0,2019-09-29,Nimes,St Etienne
+2019_1.csv,8.0,2019-09-29,Marseille,Rennes
+2019_1.csv,9.0,2019-10-04,Amiens,Marseille
+2019_1.csv,9.0,2019-10-05,Toulouse,Bordeaux
+2019_1.csv,9.0,2019-10-05,Nantes,Nice
+2019_1.csv,9.0,2019-10-05,Montpellier,Monaco
+2019_1.csv,9.0,2019-10-05,Brest,Metz
+2019_1.csv,9.0,2019-10-05,Paris SG,Angers
+2019_1.csv,9.0,2019-10-05,Dijon,Strasbourg
+2019_1.csv,9.0,2019-10-06,Lille,Nimes
+2019_1.csv,9.0,2019-10-06,Rennes,Reims
+2019_1.csv,9.0,2019-10-06,St Etienne,Lyon
+2019_1.csv,10.0,2019-10-18,Nice,Paris SG
+2019_1.csv,10.0,2019-10-19,Toulouse,Lille
+2019_1.csv,10.0,2019-10-19,Reims,Montpellier
+2019_1.csv,10.0,2019-10-19,Nimes,Amiens
+2019_1.csv,10.0,2019-10-19,Metz,Nantes
+2019_1.csv,10.0,2019-10-19,Lyon,Dijon
+2019_1.csv,10.0,2019-10-19,Angers,Brest
+2019_1.csv,10.0,2019-10-20,Bordeaux,St Etienne
+2019_1.csv,10.0,2019-10-20,Monaco,Rennes
+2019_1.csv,10.0,2019-10-20,Marseille,Strasbourg
+2019_1.csv,11.0,2019-10-25,Nantes,Monaco
+2019_1.csv,11.0,2019-10-26,Strasbourg,Nice
+2019_1.csv,11.0,2019-10-26,Reims,Nimes
+2019_1.csv,11.0,2019-10-26,Montpellier,Angers
+2019_1.csv,11.0,2019-10-26,Brest,Dijon
+2019_1.csv,11.0,2019-10-26,Lille,Bordeaux
+2019_1.csv,11.0,2019-10-26,Lyon,Metz
+2019_1.csv,11.0,2019-10-27,Rennes,Toulouse
+2019_1.csv,11.0,2019-10-27,St Etienne,Amiens
+2019_1.csv,11.0,2019-10-27,Paris SG,Marseille
+2019_1.csv,12.0,2019-11-01,Dijon,Paris SG
+2019_1.csv,12.0,2019-11-02,Marseille,Lille
+2019_1.csv,12.0,2019-11-02,Amiens,Brest
+2019_1.csv,12.0,2019-11-02,Metz,Montpellier
+2019_1.csv,12.0,2019-11-02,Toulouse,Lyon
+2019_1.csv,12.0,2019-11-02,Angers,Strasbourg
+2019_1.csv,12.0,2019-11-03,Bordeaux,Nantes
+2019_1.csv,12.0,2019-11-03,Nice,Reims
+2019_1.csv,12.0,2019-11-03,St Etienne,Monaco
+2019_1.csv,12.0,2019-11-08,Nice,Bordeaux
+2019_1.csv,13.0,2019-11-09,Reims,Angers
+2019_1.csv,13.0,2019-11-09,Strasbourg,Nimes
+2019_1.csv,13.0,2019-11-09,Lille,Metz
+2019_1.csv,13.0,2019-11-09,Brest,Paris SG
+2019_1.csv,13.0,2019-11-09,Monaco,Dijon
+2019_1.csv,13.0,2019-11-10,Rennes,Amiens
+2019_1.csv,13.0,2019-11-10,Montpellier,Toulouse
+2019_1.csv,13.0,2019-11-10,Nantes,St Etienne
+2019_1.csv,13.0,2019-11-10,Marseille,Lyon
+2019_1.csv,13.0,2019-11-22,Paris SG,Lille
+2019_1.csv,14.0,2019-11-23,Lyon,Nice
+2019_1.csv,14.0,2019-11-23,Amiens,Strasbourg
+2019_1.csv,14.0,2019-11-23,Angers,Nimes
+2019_1.csv,14.0,2019-11-23,Brest,Nantes
+2019_1.csv,14.0,2019-11-23,Dijon,Rennes
+2019_1.csv,14.0,2019-11-23,Metz,Reims
+2019_1.csv,14.0,2019-11-24,St Etienne,Montpellier
+2019_1.csv,14.0,2019-11-24,Bordeaux,Monaco
+2019_1.csv,14.0,2019-11-24,Toulouse,Marseille
+2019_1.csv,14.0,2019-11-29,Marseille,Brest
+2019_1.csv,15.0,2019-11-30,Strasbourg,Lyon
+2019_1.csv,15.0,2019-11-30,Lille,Dijon
+2019_1.csv,15.0,2019-11-30,Montpellier,Amiens
+2019_1.csv,15.0,2019-11-30,Nice,Angers
+2019_1.csv,15.0,2019-11-30,Nimes,Metz
+2019_1.csv,15.0,2019-11-30,Reims,Bordeaux
+2019_1.csv,15.0,2019-12-01,Nantes,Toulouse
+2019_1.csv,15.0,2019-12-01,Rennes,St Etienne
+2019_1.csv,15.0,2019-12-03,Angers,Marseille
+2019_1.csv,15.0,2019-12-03,Bordeaux,Nimes
+2019_1.csv,16.0,2019-12-03,Brest,Strasbourg
+2019_1.csv,16.0,2019-12-03,Lyon,Lille
+2019_1.csv,16.0,2019-12-04,Paris SG,Nantes
+2019_1.csv,16.0,2019-12-04,Toulouse,Monaco
+2019_1.csv,16.0,2019-12-04,St Etienne,Nice
+2019_1.csv,16.0,2019-12-04,Metz,Rennes
+2019_1.csv,16.0,2019-12-04,Dijon,Montpellier
+2019_1.csv,16.0,2019-12-06,Lille,Brest
+2019_1.csv,16.0,2019-12-06,Nimes,Lyon
+2019_1.csv,16.0,2019-12-07,Montpellier,Paris SG
+2019_1.csv,17.0,2019-12-07,Monaco,Amiens
+2019_1.csv,17.0,2019-12-07,Nice,Metz
+2019_1.csv,17.0,2019-12-07,Rennes,Angers
+2019_1.csv,17.0,2019-12-07,Strasbourg,Toulouse
+2019_1.csv,17.0,2019-12-08,Reims,St Etienne
+2019_1.csv,17.0,2019-12-08,Nantes,Dijon
+2019_1.csv,17.0,2019-12-08,Marseille,Bordeaux
+2019_1.csv,17.0,2019-12-13,Lille,Montpellier
+2019_1.csv,17.0,2019-12-14,Nimes,Nantes
+2019_1.csv,17.0,2019-12-14,Brest,Nice
+2019_1.csv,18.0,2019-12-14,Toulouse,Reims
+2019_1.csv,18.0,2019-12-14,Amiens,Dijon
+2019_1.csv,18.0,2019-12-14,Metz,Marseille
+2019_1.csv,18.0,2019-12-14,Angers,Monaco
+2019_1.csv,18.0,2019-12-15,Bordeaux,Strasbourg
+2019_1.csv,18.0,2019-12-15,Lyon,Rennes
+2019_1.csv,18.0,2019-12-15,St Etienne,Paris SG
+2019_1.csv,18.0,2019-12-21,Strasbourg,St Etienne
+2019_1.csv,18.0,2019-12-21,Rennes,Bordeaux
+2019_1.csv,18.0,2019-12-21,Reims,Lyon
+2019_1.csv,19.0,2019-12-21,Paris SG,Amiens
+2019_1.csv,19.0,2019-12-21,Nice,Toulouse
+2019_1.csv,19.0,2019-12-21,Montpellier,Brest
+2019_1.csv,19.0,2019-12-21,Monaco,Lille
+2019_1.csv,19.0,2019-12-21,Marseille,Nimes
+2019_1.csv,19.0,2019-12-21,Dijon,Metz
+2019_1.csv,19.0,2019-12-21,Nantes,Angers
+2019_1.csv,19.0,2020-01-10,Rennes,Marseille
+2019_1.csv,19.0,2020-01-11,Toulouse,Brest
+2019_1.csv,19.0,2020-01-11,Nimes,Reims
+2019_1.csv,20.0,2020-01-11,Metz,Strasbourg
+2019_1.csv,20.0,2020-01-11,Amiens,Montpellier
+2019_1.csv,20.0,2020-01-11,Bordeaux,Lyon
+2019_1.csv,20.0,2020-01-11,Angers,Nice
+2019_1.csv,20.0,2020-01-12,St Etienne,Nantes
+2019_1.csv,20.0,2020-01-12,Dijon,Lille
+2019_1.csv,20.0,2020-01-12,Paris SG,Monaco
+2019_1.csv,20.0,2020-01-15,Amiens,Reims
+2019_1.csv,20.0,2020-01-15,Nimes,Rennes
+2019_1.csv,20.0,2020-01-15,Monaco,Paris SG
+2019_1.csv,21.0,2020-01-24,Nice,Rennes
+2019_1.csv,21.0,2020-01-25,St Etienne,Nimes
+2019_1.csv,21.0,2020-01-25,Marseille,Angers
+2019_1.csv,21.0,2020-01-25,Brest,Amiens
+2019_1.csv,21.0,2020-01-25,Monaco,Strasbourg
+2019_1.csv,21.0,2020-01-25,Montpellier,Dijon
+2019_1.csv,21.0,2020-01-25,Reims,Metz
+2019_1.csv,21.0,2020-01-26,Nantes,Bordeaux
+2019_1.csv,21.0,2020-01-26,Lille,Paris SG
+2019_1.csv,21.0,2020-01-26,Lyon,Toulouse
+2019_1.csv,22.0,2020-01-31,Rennes,Nantes
+2019_1.csv,22.0,2020-02-01,Paris SG,Montpellier
+2019_1.csv,22.0,2020-02-01,Amiens,Toulouse
+2019_1.csv,22.0,2020-02-01,Angers,Reims
+2019_1.csv,22.0,2020-02-01,Dijon,Brest
+2019_1.csv,22.0,2020-02-01,Nimes,Monaco
+2019_1.csv,22.0,2020-02-01,Strasbourg,Lille
+2019_1.csv,22.0,2020-02-02,Bordeaux,Marseille
+2019_1.csv,22.0,2020-02-02,Nice,Lyon
+2019_1.csv,22.0,2020-02-02,Metz,St Etienne
+2019_1.csv,23.0,2020-02-04,Lille,Rennes
+2019_1.csv,23.0,2020-02-04,Monaco,Angers
+2019_1.csv,23.0,2020-02-04,Nantes,Paris SG
+2019_1.csv,23.0,2020-02-05,Toulouse,Strasbourg
+2019_1.csv,23.0,2020-02-05,St Etienne,Marseille
+2019_1.csv,23.0,2020-02-05,Reims,Nice
+2019_1.csv,23.0,2020-02-05,Nimes,Dijon
+2019_1.csv,23.0,2020-02-05,Montpellier,Metz
+2019_1.csv,23.0,2020-02-05,Lyon,Amiens
+2019_1.csv,23.0,2020-02-05,Brest,Bordeaux
+2019_1.csv,24.0,2020-02-07,Angers,Lille
+2019_1.csv,24.0,2020-02-08,Rennes,Brest
+2019_1.csv,24.0,2020-02-08,Metz,Bordeaux
+2019_1.csv,24.0,2020-02-08,Nice,Nimes
+2019_1.csv,24.0,2020-02-08,Amiens,Monaco
+2019_1.csv,24.0,2020-02-08,Marseille,Toulouse
+2019_1.csv,24.0,2020-02-08,Dijon,Nantes
+2019_1.csv,24.0,2020-02-09,Montpellier,St Etienne
+2019_1.csv,24.0,2020-02-09,Strasbourg,Reims
+2019_1.csv,24.0,2020-02-09,Paris SG,Lyon
+2019_1.csv,25.0,2020-02-14,Monaco,Montpellier
+2019_1.csv,25.0,2020-02-15,Nimes,Angers
+2019_1.csv,25.0,2020-02-15,Toulouse,Nice
+2019_1.csv,25.0,2020-02-15,Nantes,Metz
+2019_1.csv,25.0,2020-02-15,Bordeaux,Dijon
+2019_1.csv,25.0,2020-02-15,Amiens,Paris SG
+2019_1.csv,25.0,2020-02-16,Lyon,Strasbourg
+2019_1.csv,25.0,2020-02-16,Brest,St Etienne
+2019_1.csv,25.0,2020-02-16,Reims,Rennes
+2019_1.csv,25.0,2020-02-16,Lille,Marseille
+2019_1.csv,26.0,2020-02-21,Nice,Brest
+2019_1.csv,26.0,2020-02-21,Metz,Lyon
+2019_1.csv,26.0,2020-02-22,Marseille,Nantes
+2019_1.csv,26.0,2020-02-22,Angers,Montpellier
+2019_1.csv,26.0,2020-02-22,Dijon,Monaco
+2019_1.csv,26.0,2020-02-22,Lille,Toulouse
+2019_1.csv,26.0,2020-02-22,Strasbourg,Amiens
+2019_1.csv,26.0,2020-02-23,St Etienne,Reims
+2019_1.csv,26.0,2020-02-23,Rennes,Nimes
+2019_1.csv,26.0,2020-02-23,Paris SG,Bordeaux
+2019_1.csv,27.0,2020-02-28,Nimes,Marseille
+2019_1.csv,27.0,2020-02-29,Paris SG,Dijon
+2019_1.csv,27.0,2020-02-29,Amiens,Metz
+2019_1.csv,27.0,2020-02-29,Brest,Angers
+2019_1.csv,27.0,2020-02-29,Monaco,Reims
+2019_1.csv,27.0,2020-02-29,Montpellier,Strasbourg
+2019_1.csv,27.0,2020-02-29,Toulouse,Rennes
+2019_1.csv,27.0,2020-03-01,Nantes,Lille
+2019_1.csv,27.0,2020-03-01,Bordeaux,Nice
+2019_1.csv,27.0,2020-03-01,Lyon,St Etienne
+2019_1.csv,28.0,2020-03-06,Marseille,Amiens
+2019_1.csv,28.0,2020-03-07,Angers,Nantes
+2019_1.csv,28.0,2020-03-07,Dijon,Toulouse
+2019_1.csv,28.0,2020-03-07,Metz,Nimes
+2019_1.csv,28.0,2020-03-07,Nice,Monaco
+2019_1.csv,28.0,2020-03-07,Reims,Brest
+2019_1.csv,28.0,2020-03-08,Rennes,Montpellier
+2019_1.csv,28.0,2020-03-08,St Etienne,Bordeaux
+2019_1.csv,28.0,2020-03-08,Lille,Lyon
