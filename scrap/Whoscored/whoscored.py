@@ -56,9 +56,6 @@ def getChampionnatsComplets():
     driver = initDriver()
     driver.get("https://www.whoscored.com/")
     time.sleep(2)
-    WebDriverWait(driver, 10)
-    championnat = driver.find_elements_by_xpath("//*[@type='text/javascript']")
-
     championnatListe = []
     for _ in championnat:
         if 'var allRegions' in _.get_attribute("text"):
@@ -129,5 +126,5 @@ def getJoueurs(nom_equipe, url_equipe):
 
 # getChampionnatsComplets()
 # getChampionnatsMajeurs()
-# getClubs("Ligue 1", "https://fr.whoscored.com/Regions/74/Tournaments/22/France-Ligue-1")
+getClubs("Ligue 1", "https://fr.whoscored.com/Regions/74/Tournaments/22/France-Ligue-1")
 #getJoueurs("Lens", "https://fr.whoscored.com/Teams/309/Show/France-Lens")
