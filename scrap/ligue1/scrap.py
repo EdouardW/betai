@@ -37,7 +37,7 @@ class SQLUtil():
 
             cursor = connection.cursor()
 
-            cursor.execute("INSERT into public.classement_ligue1(saison, ligue, journee, classement, equipe, joues, gagnes, nuls, perdus, buts, contre, diff, forme_draw, forme_win, forme_lose) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", [x for x in liste])
+            cursor.execute("INSERT into public.classement_ligue1(saison, ligue, journee, classement, equipe, points, joues, gagnes, nuls, perdus, buts, contre, diff, forme_draw, forme_win, forme_lose) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", [x for x in liste])
             connection.commit()
 
         except (Exception, psycopg2.Error) as error:
@@ -48,8 +48,6 @@ class SQLUtil():
 
             if connection:
                 connection.close()
-
-
 
 
 def initDriver():
@@ -65,13 +63,30 @@ def getChampionnatsComplets(saison):
     driver.get("https://www.ligue1.fr/classement?seasonId={}&matchDay=1".format(saison))
     time.sleep(2)
 
+    liste_journee = len(driver.find_elements_by_xpath("//*[contains(@id,'selectdays')]/option"))
+
+    print('Scrap saison {}, journee {}'.format(saison, 1))
+    get_data(driver, saison)
+    #driver.close()
+
+    for journee in range(2, liste_journee +1):
+        time.sleep(2)
+        print('Scrap saison {}, journee {}'.format(saison, journee))
+
+        driver.get("https://www.ligue1.fr/classement?seasonId={}&matchDay={}".format(saison, journee))
+        
+        get_data(driver, saison, journee=journee)
+    
+    driver.close()
+    
+def get_data(driver, saison, journee = 1):
     blocs_position = driver.find_elements_by_xpath("//div[@class='classement-table-body']/ul/li")
 
     for bloc in blocs_position:
         liste_donnees = []
         saison = saison
         ligue = 'Ligue 1'
-        journee = 1
+        journee = journee
 
         pos = bloc.find_element_by_xpath("./div[contains(@class,'position')]").text
         club = bloc.find_element_by_xpath("./*[contains(@class,'club')]/a[contains(@class,'clubnamelink')]").text
@@ -91,13 +106,12 @@ def getChampionnatsComplets(saison):
         forme_win = len(bloc_stats[7].find_elements_by_xpath("./span[contains(@class,'circle win')]"))
         forme_lose = len(bloc_stats[7].find_elements_by_xpath("./span[contains(@class,'circle lose')]"))
 
-        liste_donnees.extend((saison, ligue, journee, pos, club, joues, gagnes, nuls, perdus, buts, contre, diff, forme_draw, forme_win, forme_lose))
+        liste_donnees.extend((saison, ligue, journee, pos, club, points, joues, gagnes, nuls, perdus, buts, contre, diff, forme_draw, forme_win, forme_lose))
         SQLUtil.play_sql(liste_donnees)
-        #print([x for x in liste_donnees])
-    #liste_journee = len(driver.find_elements_by_xpath("//*[contains(@id,'selectdays')]/option"))
-    #for i in range (liste_journee):
-    #    driver.get("https://www.ligue1.fr/classement?seasonId={}&matchDay={}".format(saison, i+1))
 
+#saison = ['2000-2001', '2001-2002', '2002-2003','2003-2004']
+#saison = ['2005-2006', '2006-2007', '2007-2008','2008-2009','2009-2010','2010-2011','2011-2012','2012-2013','2013-2014','2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020','2020-2021']
+saison = ['2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020','2020-2021']
 
-saison = '1997-1998'
-getChampionnatsComplets(saison)
+for i in saison:
+    getChampionnatsComplets(i)
