@@ -14,7 +14,7 @@ class DataPrep():
         self.__all_df__ = []
 
         for f in self.__all_files__:
-            
+            print(f)
             df = self.load_files_and_format(f)
             df = self.add_journee(df)
             df['file'] = f
@@ -62,5 +62,5 @@ class DataPrep():
 
 
 path = 'scrap/footballData/data/'
-nom_championnat = 'FRANCE (copie)'
+nom_championnat = 'FRANCE_ligue1'
 DataPrep(path, nom_championnat) 
