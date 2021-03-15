@@ -146,7 +146,7 @@ def get_suivi_journee(saison):
     liste_journee = len(driver.find_elements_by_xpath("//*[contains(@id,'SelectDays')]/option"))
     print('liste journee', liste_journee)
 
-    print('Scrap saison {}, journee {}'.format(saison, 4))
+    print('Scrap saison {}, journee {}'.format(saison, 1))
     get_data_journee(driver, saison)
 
     for journee in range(2, liste_journee +1):
@@ -201,4 +201,4 @@ saison = ['2004-2005']
 
 for i in saison:
     #get_suivi_classement(i)
-    get_suivi_journee(i)
+    #get_suivi_journee(i)

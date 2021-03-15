@@ -14,7 +14,7 @@ PG_PORT = '5432'
 class SQLUtil():
 
     @classmethod
-    def play_sql(cls, liste):
+    def play_sql(cls, request):
         connection = None
         cursor = None
 
@@ -25,11 +25,11 @@ class SQLUtil():
                                           port=PG_PORT,
                                           database=PG_DATABASE)
 
-            cursor = connection.cursor()
+            cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
+            cursor.execute(request)
+            result = [r[0] for r in cursor.fetchall()]
 
-            for clubs in liste:
-                cursor.execute("INSERT into public.clubs(nom_datacouk) VALUES (%s)", [clubs])
-            connection.commit()
+            return result
 
         except (Exception, psycopg2.Error) as error:
             print("Error while connecting to PostgreSQL", error)
@@ -40,3 +40,87 @@ class SQLUtil():
             if connection:
                 connection.close()
 
+    
+    @classmethod
+    def mapping_name_sql(cls, nom_entree):
+        connection = None
+        cursor = None
+        request = "select lfp from public.mapping_name where datacouk = '{}'".format(nom_entree)
+
+        try:
+            connection = psycopg2.connect(user=PG_USER,
+                                          password=PG_PASSWORD,
+                                          host=PG_HOST,
+                                          port=PG_PORT,
+                                          database=PG_DATABASE)
+
+            cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
+            cursor.execute(request)
+            result = [r[0] for r in cursor.fetchall()]
+
+            return result
+
+        except (Exception, psycopg2.Error) as error:
+            print("Error while connecting to PostgreSQL", error)
+        finally:
+            if cursor:
+                cursor.close()
+
+            if connection:
+                connection.close()
+
+    @classmethod
+    def get_classement_sql(cls, team, saison, journee):
+        connection = None
+        cursor = None
+        request = "SELECT classement FROM public.classement_ligue1 where equipe = '{}' AND saison = '{}' AND journee = '{}'".format(team, saison, str(journee))
+
+        try:
+            connection = psycopg2.connect(user=PG_USER,
+                                          password=PG_PASSWORD,
+                                          host=PG_HOST,
+                                          port=PG_PORT,
+                                          database=PG_DATABASE)
+
+            cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
+            cursor.execute(request)
+            result = [r[0] for r in cursor.fetchall()]
+
+            return result
+
+        except (Exception, psycopg2.Error) as error:
+            print("Error while connecting to PostgreSQL", error)
+        finally:
+            if cursor:
+                cursor.close()
+
+            if connection:
+                connection.close()
+
+    @classmethod
+    def get_forme_sql(cls, team, saison, journee):
+        connection = None
+        cursor = None
+        request = "SELECT forme_win, forme_draw, forme_lose FROM public.classement_ligue1 where equipe = '{}' AND saison = '{}' AND journee = '{}'".format(team, saison, str(journee))
+
+        try:
+            connection = psycopg2.connect(user=PG_USER,
+                                          password=PG_PASSWORD,
+                                          host=PG_HOST,
+                                          port=PG_PORT,
+                                          database=PG_DATABASE)
+
+            cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
+            cursor.execute(request)
+            result = cursor.fetchall()[0]
+
+            return result
+
+        except (Exception, psycopg2.Error) as error:
+            print("Error while connecting to PostgreSQL", error)
+        finally:
+            if cursor:
+                cursor.close()
+
+            if connection:
+                connection.close()
