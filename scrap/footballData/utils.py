@@ -70,38 +70,14 @@ class SQLUtil():
                 connection.close()
 
     @classmethod
-    def get_classement_sql(cls, team, saison, journee):
+    def get_classement_and_forme_sql(cls, team, saison, journee):
         connection = None
         cursor = None
-        request = "SELECT classement FROM public.classement_ligue1 where equipe = '{}' AND saison = '{}' AND journee = '{}'".format(team, saison, str(journee))
+        if "'" in team:
+            str_split = team.split("'")
+            team = "{}\\'{}".format(str_split[0], str_split[1])
 
-        try:
-            connection = psycopg2.connect(user=PG_USER,
-                                          password=PG_PASSWORD,
-                                          host=PG_HOST,
-                                          port=PG_PORT,
-                                          database=PG_DATABASE)
-
-            cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
-            cursor.execute(request)
-            result = [r[0] for r in cursor.fetchall()]
-
-            return result
-
-        except (Exception, psycopg2.Error) as error:
-            print("Error while connecting to PostgreSQL", error)
-        finally:
-            if cursor:
-                cursor.close()
-
-            if connection:
-                connection.close()
-
-    @classmethod
-    def get_forme_sql(cls, team, saison, journee):
-        connection = None
-        cursor = None
-        request = "SELECT forme_win, forme_draw, forme_lose FROM public.classement_ligue1 where equipe = '{}' AND saison = '{}' AND journee = '{}'".format(team, saison, str(journee))
+        request = "SELECT classement, forme_win, forme_draw, forme_lose, points, gagnes, nuls, perdus, buts, contre FROM public.classement_ligue1 where equipe = E'{}' AND saison = '{}' AND journee = '{}'".format(team, saison, str(journee))
 
         try:
             connection = psycopg2.connect(user=PG_USER,

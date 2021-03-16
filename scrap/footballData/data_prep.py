@@ -42,7 +42,16 @@ class DataPrep():
         SQLUtil.play_sql(unique_clubs)
 
     def filtered_df(self, df):
-        features_to_keep =  ['saison', 'journee', 'Date', 'HomeTeam', 'AwayTeam', 'cl_hometeam', 'cl_awayteam', 'forme_h_win', 'forme_h_draw', 'forme_h_lose' , 'forme_a_win', 'forme_a_draw', 'forme_a_lose']
+        features_to_keep =  [
+            'saison', 'journee', 'Date', \
+            'HomeTeam', 'AwayTeam', \
+            'cl_hometeam', 'cl_awayteam', \
+            'points_h','gagnes_h','nuls_h','perdus_h','buts_h','contre_h', \
+            'points_a','gagnes_a','nuls_a','perdus_a','buts_a','contre_a', \
+            'forme_h_win', 'forme_h_draw', 'forme_h_lose' , 'forme_a_win', 'forme_a_draw', 'forme_a_lose', \
+            'FTHG','FTAG','FTR','HTHG','HTAG','HTR',\
+            'HST','AST','HC','AC','HY','AY','HR','AR',\
+            'B365H','B365D','B365A']
         df_filtered = df[features_to_keep]
 
         return df_filtered
@@ -73,26 +82,76 @@ class DataPrep():
                 ht_sortie = SQLUtil.mapping_name_sql(row['HomeTeam'])
                 at_sortie = SQLUtil.mapping_name_sql(row['AwayTeam'])
 
-                cl_ht = SQLUtil.get_classement_sql(ht_sortie[0], row['saison'], int(row['journee'])- 1)[0]
-                cl_at = SQLUtil.get_classement_sql(at_sortie[0], row['saison'], int(row['journee']) - 1)[0]
+                home_request = SQLUtil.get_classement_and_forme_sql(ht_sortie[0], row['saison'], int(row['journee'])- 1)
+                away_request = SQLUtil.get_classement_and_forme_sql(at_sortie[0], row['saison'], int(row['journee'])- 1)
 
-                forme_h_win = SQLUtil.get_forme_sql(ht_sortie[0], row['saison'], int(row['journee'])- 1)[0]
-                forme_h_draw = SQLUtil.get_forme_sql(ht_sortie[0], row['saison'], int(row['journee']) - 1)[1]
-                forme_h_lose = SQLUtil.get_forme_sql(ht_sortie[0], row['saison'], int(row['journee']) - 1)[2]
+                cl_ht = home_request[0]
+                cl_at = away_request[0]
 
-                forme_a_win = SQLUtil.get_forme_sql(at_sortie[0], row['saison'], int(row['journee'])- 1)[0]
-                forme_a_draw = SQLUtil.get_forme_sql(at_sortie[0], row['saison'], int(row['journee']) - 1)[1]
-                forme_a_lose = SQLUtil.get_forme_sql(at_sortie[0], row['saison'], int(row['journee']) - 1)[2]
+                forme_h_win = home_request[1]
+                forme_h_draw = home_request[2]
+                forme_h_lose = home_request[3]
+                forme_a_win = away_request[1]
+                forme_a_draw = away_request[2]
+                forme_a_lose = away_request[3]
+
+                points_h = home_request[4]
+                gagnes_h = home_request[5]
+                nuls_h = home_request[6]
+                perdus_h = home_request[7]
+                buts_h = home_request[8]
+                contre_h = home_request[9]
+                
+                points_a = away_request[4]
+                gagnes_a = away_request[5]
+                nuls_a = away_request[6]
+                perdus_a = away_request[7]
+                buts_a = away_request[8]
+                contre_a =away_request[9]
                 
                 df_name.loc[index, 'cl_hometeam'] = cl_ht
                 df_name.loc[index, 'cl_awayteam'] = cl_at
-
                 df_name.loc[index, 'forme_h_win'] = str(forme_h_win)
                 df_name.loc[index, 'forme_h_draw'] = str(forme_h_draw)
                 df_name.loc[index, 'forme_h_lose'] = str(forme_h_lose)
                 df_name.loc[index, 'forme_a_win'] = str(forme_a_win)
                 df_name.loc[index, 'forme_a_draw'] = str(forme_a_draw)
                 df_name.loc[index, 'forme_a_lose'] = str(forme_a_lose)
+                
+                df_name.loc[index, 'points_h'] = points_h
+                df_name.loc[index, 'gagnes_h'] = gagnes_h
+                df_name.loc[index, 'nuls_h'] = nuls_h
+                df_name.loc[index, 'perdus_h'] = perdus_h
+                df_name.loc[index, 'buts_h'] = buts_h
+                df_name.loc[index, 'contre_h'] = contre_h
+
+                df_name.loc[index, 'points_a'] = points_a
+                df_name.loc[index, 'gagnes_a'] = gagnes_a
+                df_name.loc[index, 'nuls_a'] = nuls_a
+                df_name.loc[index, 'perdus_a'] = perdus_a
+                df_name.loc[index, 'buts_a'] = buts_a
+                df_name.loc[index, 'contre_a'] = contre_a
+
+
+            else:
+                df_name.loc[index, 'forme_h_win'] = '-1'
+                df_name.loc[index, 'forme_h_draw'] = '-1'
+                df_name.loc[index, 'forme_h_lose'] = '-1'
+                df_name.loc[index, 'forme_a_win'] = '-1'
+                df_name.loc[index, 'forme_a_draw'] = '-1'
+                df_name.loc[index, 'forme_a_lose'] = '-1'
+                df_name.loc[index, 'points_h'] = '-1'
+                df_name.loc[index, 'gagnes_h'] = '-1'
+                df_name.loc[index, 'nuls_h'] = '-1'
+                df_name.loc[index, 'perdus_h'] = '-1'
+                df_name.loc[index, 'buts_h'] = '-1'
+                df_name.loc[index, 'contre_h'] = '-1'
+                df_name.loc[index, 'points_a'] = '-1'
+                df_name.loc[index, 'gagnes_a'] = '-1'
+                df_name.loc[index, 'nuls_a'] = '-1'
+                df_name.loc[index, 'perdus_a'] = '-1'
+                df_name.loc[index, 'buts_a'] = '-1'
+                df_name.loc[index, 'contre_a'] = '-1'
 
         return df_name
 
@@ -134,8 +193,11 @@ class MapClubName():
 
     
 path = 'scrap/footballData/data/'
-nom_championnat = 'FRANCE (copie)'
-name = 'FRANCE (copie)_ligue1_complet_filtered.csv'
+#nom_championnat = 'FRANCE (copie)'
+#name = 'FRANCE(copie)_ligue1_complet_filtered.csv'
+
+nom_championnat = 'FRANCE_ligue1'
+name = 'FRANCE_ligue1_complet_filtered.csv'
 
 DataPrep(path, nom_championnat) 
 #MapClubName(path, name)
