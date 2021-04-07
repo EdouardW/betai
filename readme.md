@@ -1,8 +1,17 @@
-# Dataset for football bets Machine learning prediction
+# S'amuser avec les datas des chammpionnats de footaball francais (Ligue 1 / Ligue 2)
 
-Construction of a French Ligue 1 dataset (starting from season 2001-2002), based on: 
-- open data from https://www.football-data.co.uk/
-- data from official Ligue 1 website (https://www.ligue1.fr)
+L'objectif est dans un premier temps de collecter les datas issus des sites:
+- https://www.football-data.co.uk/ => récupération entres autres des résultats et des côtes sur les sites de paris pour chaque match.
+- https://www.ligue1.fr => récupération des classements, résultats et forme des équipes sur le site officiel du championnat francais.
+
+Utilisations identifiées:
+- Dataviz (Apache Superset)
+- Prédiction avec algos de ML
+
+## Architecture du projet
+
+
+
 
 
 ## 'Scrap' directory 
