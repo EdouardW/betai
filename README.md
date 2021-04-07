@@ -1,4 +1,4 @@
-# S'amuser avec les datas des chammpionnats de football francais
+# S'amuser avec les datas des championnats de football francais
 
 L'objectif est dans un premier temps de collecter les datas issus des sites:
 - https://www.football-data.co.uk/ => récupération entres autres des résultats et des côtes sur les sites de paris pour chaque match.
