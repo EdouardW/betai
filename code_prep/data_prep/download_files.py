@@ -2,7 +2,10 @@ import requests
 import os
 
 from lxml import html
+from betai_flask import app
 
+import json
+from flask import make_response, Response
 
 def find_all_links(url) -> list:
     response = requests.get(url)
@@ -36,6 +39,7 @@ def find_note_link(url) -> str:
 def create_input_folder(country_name, path):
 
     if os.path.isdir(path) is False:
+        #print(os.getcwd())
         os.mkdir(path)
 
 
@@ -77,6 +81,21 @@ def download_csv_and_notes(country_name, link, path):
         with open(path_dl_note, 'wb') as file:
             for chunk in download_note:
                 file.write(chunk)
+
+@app.route('/datacouk/download_files')
+def download_files():
+    country_to_load = {
+        'France': 'https://www.football-data.co.uk/francem.php'
+        }
+    for country_name, link in country_to_load.items():
+        path = f'./code_prep/input/{country_name}'
+        create_input_folder(country_name, path)
+        download_csv_and_notes(country_name, link, path)
+
+    response = make_response(json.dumps(
+        {"result": "C'est OK"}))
+    response.mimetype = 'application/json'
+    return response
 
 
 if __name__ == "__main__":
