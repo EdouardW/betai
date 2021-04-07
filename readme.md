@@ -1,4 +1,4 @@
-# S'amuser avec les datas des chammpionnats de footaball francais (Ligue 1 / Ligue 2)
+# S'amuser avec les datas des chammpionnats de football francais
 
 L'objectif est dans un premier temps de collecter les datas issus des sites:
 - https://www.football-data.co.uk/ => récupération entres autres des résultats et des côtes sur les sites de paris pour chaque match.
@@ -10,36 +10,8 @@ Utilisations identifiées:
 
 ## Architecture du projet
 
+- Scrap: sélénium + donwload csv 
+- Flask 
+- Pg admin
 
-
-
-
-## 'Scrap' directory 
-
-### 'ligue1' directory 
-Scrap with selenium to get all ranking positions by match day and all scores.
-
-### footballData directory 
-Merge all files in one csv output files. 
-
-### result output
-
-'saison' \
-'journee' \
-'Date'\
-'HomeTeam'\
-'AwayTeam'\
-'cl_hometeam'\
-'cl_awayteam'\
-'forme_h_win'\
-'forme_h_draw'\
-'forme_h_lose'\
-'forme_a_win'\
-'forme_a_draw'\
-'forme_a_lose'\
-
-
-
-## 'ML' directory
-
-TODO
+![Architecture du projet](./images/architecture_betai.png)
