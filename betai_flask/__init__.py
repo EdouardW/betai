@@ -1,5 +1,5 @@
 from flask import Flask
 app = Flask(__name__)
 
-from betai_flask import test
-from code_prep.data_prep import download_files
+from betai_flask import main
+from code_prep import datacouk_download_files
