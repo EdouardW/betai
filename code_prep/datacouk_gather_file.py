@@ -1,12 +1,16 @@
 import os
 import pandas as pd
 
+from flask import make_response, Response
+from lxml import html
+from betai_flask import app
+from pathlib import Path
+
 
 def list_files_path(country_name, league_name):
-    root_path = './input/'
-    directories = os.listdir(os.path.join(root_path, country_name))
+    root_path = Path(f'./input/datacouk/all_files/{country_name}')
     list_path = []
-    for file in directories:
+    for file in root_path:
         if '.csv' in file and league_name in file:
             list_path.append(os.path.join(root_path, country_name, file))
     return list_path
@@ -16,7 +20,7 @@ def gather_unique_file(country_name, season_name):
     output_file = open('file.csv', 'w')
     output_file = pd.concat([pd.read_csv(file) for file in list_files_path(country_name, season_name)]).drop([0], axis = 0)
 
-    output_file.to_csv('./input/gathered_file.csv')
+    output_file.to_csv('./datacoukinput/gathered_file.csv')
 
 
 """         try:
@@ -29,10 +33,7 @@ def gather_unique_file(country_name, season_name):
             print(f'{file} not loaded') """
 
 
+@app.route('/datacouk/gather_all_files')
 def gather_files(country_name, season_name):
-    league_file = gather_unique_file(country_name, season_name)
+    league_file = gather_unique_file('France', season_name)
 
-
-if __name__ == "__main__":
-    country_name = 'France'
-    gather_files(country_name, 'Ligue1')

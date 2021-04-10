@@ -7,10 +7,7 @@ from lxml import html
 from betai_flask import app
 from pathlib import Path
 
-
-def create_input_folder(path: Path) -> None:
-    if path.is_dir() is False:
-        path.mkdir(parents=True)
+from .utils import create_input_folder
 
 
 def find_all_href_links(url: str) -> list:
@@ -51,9 +48,10 @@ def reformat_league(league: str, country_name: str) -> str:
     return league
 
 
-def download_csv_and_notes(country_name: str, url: str, country_path: Path):
+def download_csv_and_notes(country_name: str, url: str, country_path: Path) -> int:
     list_files_to_dl: list = list_all_files_to_download(url)
 
+    count_dl = 0
     for dl_url in list_files_to_dl:
         if '.csv' in dl_url:
             season, league = dl_url.split('/')[-2:]
@@ -62,6 +60,7 @@ def download_csv_and_notes(country_name: str, url: str, country_path: Path):
             path_filename: Path = Path(country_path, f'{league}_{season}.csv')
             download = requests.get(dl_url)
             if download.status_code == 200:
+                count_dl += 1
                 with open(path_filename, 'wb') as file:
                     file.write(download.content)
 
@@ -73,10 +72,11 @@ def download_csv_and_notes(country_name: str, url: str, country_path: Path):
                     for chunk in download_note:
                         file.write(chunk)
 
+    return count_dl
 
 @app.route('/datacouk/download_all_files')
 def download_all_files():
-    root_path: Path = Path('./input/datacouk/')
+    root_path: Path = Path('./input/datacouk/all_files')
     
     country_to_load: dict = {
         'France': 'https://www.football-data.co.uk/francem.php'
@@ -85,9 +85,9 @@ def download_all_files():
     for country_name, url in country_to_load.items():
         country_path: Path = Path(root_path / country_name)
         create_input_folder(country_path)
-        download_csv_and_notes(country_name, url, country_path)
+        download = download_csv_and_notes(country_name, url, country_path)
 
     response = make_response(json.dumps(
-        {"result": "C'est OK"}))
+        {"Nb de fichiers telecharges": download}))
     response.mimetype = 'application/json'
     return response
