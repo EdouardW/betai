@@ -15,3 +15,6 @@ Utilisations identifiées:
 - Pg admin
 
 ![Architecture du projet](./images/architecture_betai.png)
+
+
+ps -ef  | grep gunicorn
