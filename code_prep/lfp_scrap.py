@@ -4,6 +4,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 
+from flask import make_response, Response
+from betai_flask import app
+
 import dateparser
 import time
 import sys
@@ -136,7 +139,7 @@ def get_data_classement(driver, saison, journee = 1):
         liste_donnees.extend((saison, ligue, journee, pos, club, points, joues, gagnes, nuls, perdus, buts, contre, diff, forme_draw, forme_win, forme_lose))
         SQLUtil.play_sql_classement(liste_donnees)
 
-
+@app.route('/lfp/scrap_journee/<saison>')
 def get_suivi_journee(saison):
     driver = initDriver()
 
@@ -144,7 +147,7 @@ def get_suivi_journee(saison):
     time.sleep(2)
 
     liste_journee = len(driver.find_elements_by_xpath("//*[contains(@id,'SelectDays')]/option"))
-    print('liste journee', liste_journee)
+    print(f'{len(liste_journee)} trouvée pour cette saison')
 
     print('Scrap saison {}, journee {}'.format(saison, 1))
     get_data_journee(driver, saison)
@@ -168,13 +171,13 @@ def get_data_journee(driver, saison, journee = 1):
  
     blocs_journee = bloc_calendrier.find_elements_by_xpath("./div")
     blocs_match = bloc_calendrier.find_elements_by_xpath("./ul")
-
-    for day, match in zip(blocs_journee, blocs_match):
+    
+    for day, match in zip(blocs_journee[0:2], blocs_match[0:2]):
         date = dateparser.parse(day.text).date()
 
         bloc_detail_match = match.find_elements_by_xpath("./li")
         
-        for detail in bloc_detail_match:
+        for detail in bloc_detail_match[0:2]:
             liste_donnees = []
 
             hometeam = detail.find_element_by_xpath("./div[@class='clubs-container left']/div[@class='club home']").text
@@ -192,13 +195,13 @@ def get_data_journee(driver, saison, journee = 1):
                 result = '1'
             
             liste_donnees.extend((saison, ligue, journee, date, hometeam, home_score, away_score, awayteam, result, datetime.datetime.today().strftime('%Y-%m-%d')))
-            SQLUtil.play_sql_journee(liste_donnees)
+            #SQLUtil.play_sql_journee(liste_donnees)
 
 #saison = ['2000-2001','2001-2002', '2002-2003']
 #saison = ['2003-2004','2005-2006', '2006-2007', '2007-2008','2008-2009','2009-2010']
 #saison = ['2010-2011','2011-2012','2012-2013','2013-2014','2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020','2020-2021']
-saison = ['2004-2005']
+#saison = ['2004-2005']
 
-for i in saison:
+#for i in saison:
     #get_suivi_classement(i)
     #get_suivi_journee(i)
