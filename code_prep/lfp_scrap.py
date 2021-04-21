@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 
 from flask import make_response, Response
 from betai_flask import app
+from code_prep.sql_utils import SQLUtil
 
 import dateparser
 import time
@@ -15,70 +16,16 @@ import json
 import re
 import datetime
 
-import psycopg2
-import psycopg2.extras
 
-
-PG_HOST = 'localhost'
-PG_DATABASE = 'betai'
-PG_USER = 'postgres'
-PG_PASSWORD = 'dodu'
-PG_PORT = '5432'
-
-
-class SQLUtil():
-
-    @classmethod
-    def play_sql_classement(cls, liste):
-        connection = None
-        cursor = None
-
-        try:
-            connection = psycopg2.connect(user=PG_USER,
-                                          password=PG_PASSWORD,
-                                          host=PG_HOST,
-                                          port=PG_PORT,
-                                          database=PG_DATABASE)
-
-            cursor = connection.cursor()
-
-            cursor.execute("INSERT into public.classement_ligue1(saison, ligue, journee, classement, equipe, points, joues, gagnes, nuls, perdus, buts, contre, diff, forme_draw, forme_win, forme_lose) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", [x for x in liste])
-            connection.commit()
-
-        except (Exception, psycopg2.Error) as error:
-            print("Error while connecting to PostgreSQL", error)
-        finally:
-            if cursor:
-                cursor.close()
-
-            if connection:
-                connection.close()
-
-    @classmethod
-    def play_sql_journee(cls, liste):
-        connection = None
-        cursor = None
-
-        try:
-            connection = psycopg2.connect(user=PG_USER,
-                                          password=PG_PASSWORD,
-                                          host=PG_HOST,
-                                          port=PG_PORT,
-                                          database=PG_DATABASE)
-
-            cursor = connection.cursor()
-
-            cursor.execute("INSERT into public.journee_ligue1(saison, ligue, journee, date, home_team, home_score, away_score, away_team, resultat, date_ajout) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", [x for x in liste])
-            connection.commit()
-
-        except (Exception, psycopg2.Error) as error:
-            print("Error while connecting to PostgreSQL", error)
-        finally:
-            if cursor:
-                cursor.close()
-
-            if connection:
-                connection.close()
+@app.route('/lfp/sql/insert')
+def sql_insert():
+    sql_client = SQLUtil()
+    sql_client.create_table()
+    #sql_client.import_json()
+    
+    response = make_response(json.dumps({"SQL": 'essai'}))
+    response.mimetype = 'application/json'
+    return response
 
 def initDriver():
     chrome_options = Options()
