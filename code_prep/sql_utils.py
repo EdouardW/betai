@@ -38,7 +38,7 @@ class SQLUtil():
     def create_table(self):
         list_request = []
         request = """
-            CREATE TABLE ligue1.global_match 
+            CREATE TABLE IF NOT EXISTS ligue1.global_match 
                (saison VARCHAR(20),
                 ligue VARCHAR(20),
                 journee INT, 
@@ -52,53 +52,33 @@ class SQLUtil():
         list_request.append(request)
         self._run_request('creating table: global match:', list_request)
 
-    def import_json(self):
-        request_1 = """
-                    create temp table customer_import (doc json)
-                 """
+    def import_json(self, data_list):
+        list_request = []
+        #for key, value in data_list.items():
+        #values = [x for x in data_list.values()]
+        request = """
+            INSERT into ligue1.global_match 
+            VALUES
+            (%(saison)s,
+            %(ligue)s,
+            %(journee)s,
+            %(id_match)s,
+            %(result)s,
+            %(hometeam)s,
+            %(awayteam)s,
+            %(home_score)s,
+            %(away_score)s) 
+            """
 
-        request_2 = """
-                \copy customer_import from 'customers.json'
-                """
-
-        self._run_request('Creating temporary table to load Json column:', request_1)
-
-
-
+        self.cursor.execute(request, data_list)
+        self.connection.commit()
+        #self._run_request('import json', list_request)
 
     def close(self):
         self.cursor.close()
         self.connection.close()    
     
 
-
-
-
-    @classmethod
-    def play_sql_classement(cls, liste):
-        connection = None
-        cursor = None
-
-        try:
-            connection = psycopg2.connect(user=PG_USER,
-                                          password=PG_PASSWORD,
-                                          host=PG_HOST,
-                                          port=PG_PORT,
-                                          database=PG_DATABASE)
-
-            cursor = connection.cursor()
-
-            cursor.execute("INSERT into public.classement_ligue1(saison, ligue, journee, classement, equipe, points, joues, gagnes, nuls, perdus, buts, contre, diff, forme_draw, forme_win, forme_lose) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", [x for x in liste])
-            connection.commit()
-
-        except (Exception, psycopg2.Error) as error:
-            print("Error while connecting to PostgreSQL", error)
-        finally:
-            if cursor:
-                cursor.close()
-
-            if connection:
-                connection.close()
 
     @classmethod
     def play_sql_journee(cls, liste):

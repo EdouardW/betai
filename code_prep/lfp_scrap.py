@@ -17,12 +17,33 @@ import re
 import datetime
 
 
+class convert_journee_to_list():
+    saison = None
+    ligue = None
+    journee = None
+    id_match = None
+    result = None
+    hometeam = None
+    awayteam = None
+    home_score = None
+    away_score = None
+
+
+def essai():
+    file_to_load = open('./code_prep/output/lfp/journee/ligue1.json',)
+    data_to_load= json.load(file_to_load)
+    print(data_to_load[0])
+
 @app.route('/lfp/sql/insert')
 def sql_insert():
     sql_client = SQLUtil()
     sql_client.create_table()
-    #sql_client.import_json()
     
+    file_to_load = open('./code_prep/output/lfp/journee/ligue1.json',)
+    data_to_load= json.load(file_to_load)
+    for journee in data_to_load:
+        sql_client.import_json(journee)
+
     response = make_response(json.dumps({"SQL": 'essai'}))
     response.mimetype = 'application/json'
     return response
@@ -32,7 +53,6 @@ def initDriver():
     # chrome_options.add_argument('--headless')
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     return driver
-
 
 def get_suivi_classement(saison):
     driver = initDriver()
@@ -99,7 +119,13 @@ def get_suivi_journee(saison):
     print('Scrap saison {}, journee {}'.format(saison, 1))
     liste_journee = [] 
     liste_journee.append(get_data_journee(driver, saison))
-    
+    #for journee in range(2, len(liste_journee) +1):
+    #    time.sleep(2)
+    #    print('Scrap saison {}, journee {}'.format(saison, journee))
+
+    #driver.get("https://www.ligue1.fr/calendrier-resultats?seasonId={}&matchDay={}".format(saison, journee))
+        
+    #    get_data_journee(driver, saison, journee=journee)
     with open(os.path.join(os.path.dirname(__file__), 'output', 'ligue1.json'), 'w') as outfile:
         json.dump(liste_journee, outfile)
     driver.close()
@@ -108,16 +134,6 @@ def get_suivi_journee(saison):
 
     response.mimetype = 'application/json'
     return response
-
-"""     for journee in range(2, len(liste_journee) +1):
-        time.sleep(2)
-        print('Scrap saison {}, journee {}'.format(saison, journee))
-
-        driver.get("https://www.ligue1.fr/calendrier-resultats?seasonId={}&matchDay={}".format(saison, journee))
-        
-        get_data_journee(driver, saison, journee=journee)
-    """
-
 
 def get_data_journee(driver, saison, journee = 1):
     
@@ -167,6 +183,9 @@ def get_data_journee(driver, saison, journee = 1):
             return data_journee
 
 
+
+if __name__ == "__main__":
+    print('Essai')
 #saison = ['2000-2001','2001-2002', '2002-2003']
 #saison = ['2003-2004','2005-2006', '2006-2007', '2007-2008','2008-2009','2009-2010']
 #saison = ['2010-2011','2011-2012','2012-2013','2013-2014','2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020','2020-2021']
