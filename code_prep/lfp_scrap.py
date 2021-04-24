@@ -17,23 +17,6 @@ import re
 import datetime
 
 
-class convert_journee_to_list():
-    saison = None
-    ligue = None
-    journee = None
-    id_match = None
-    result = None
-    hometeam = None
-    awayteam = None
-    home_score = None
-    away_score = None
-
-
-def essai():
-    file_to_load = open('./code_prep/output/lfp/journee/ligue1.json',)
-    data_to_load= json.load(file_to_load)
-    print(data_to_load[0])
-
 @app.route('/lfp/sql/insert')
 def sql_insert():
     sql_client = SQLUtil()
@@ -116,18 +99,18 @@ def get_suivi_journee(saison):
     liste_journee = driver.find_elements_by_xpath("//*[contains(@id,'SelectDays')]/option")
     print(f'{len(liste_journee)} journées trouvées pour cette saison')
 
+    data = []
     print('Scrap saison {}, journee {}'.format(saison, 1))
-    liste_journee = [] 
-    liste_journee.append(get_data_journee(driver, saison))
-    #for journee in range(2, len(liste_journee) +1):
-    #    time.sleep(2)
-    #    print('Scrap saison {}, journee {}'.format(saison, journee))
+    data.append(get_data_journee(driver, saison))
+    
+    for journee in range(2, len(liste_journee)+1):
+        time.sleep(2)
+        print('Scrap saison {}, journee {}'.format(saison, journee))
+        driver.get("https://www.ligue1.fr/calendrier-resultats?seasonId={}&matchDay={}".format(saison, journee))
+        data.append(get_data_journee(driver, saison, journee=journee))
 
-    #driver.get("https://www.ligue1.fr/calendrier-resultats?seasonId={}&matchDay={}".format(saison, journee))
-        
-    #    get_data_journee(driver, saison, journee=journee)
-    with open(os.path.join(os.path.dirname(__file__), 'output', 'ligue1.json'), 'w') as outfile:
-        json.dump(liste_journee, outfile)
+    with open(os.path.join(os.path.dirname(__file__), 'output', 'lfp', 'journee','ligue1.json'), 'w') as outfile:
+        json.dump(data, outfile)
     driver.close()
 
     response = make_response(json.dumps({"Nb de fichiers concatener": 'essai'}))
@@ -146,7 +129,7 @@ def get_data_journee(driver, saison, journee = 1):
     blocs_match = bloc_calendrier.find_elements_by_xpath("./ul")
     
     for day, match in zip(blocs_journee, blocs_match):
-        date = dateparser.parse(day.text).date()
+        date = dateparser.parse(day.text).date().isoformat()
 
         bloc_detail_match = match.find_elements_by_xpath("./li")
         
@@ -171,21 +154,18 @@ def get_data_journee(driver, saison, journee = 1):
             data_journee['saison'] = saison 
             data_journee['ligue'] = ligue 
             data_journee['journee'] = journee 
-            #data_journee['date'] = date
+            data_journee['date'] = date
             data_journee['id_match'] = id_match
             data_journee['result'] = result
             data_journee['hometeam'] = hometeam
             data_journee['awayteam'] = awayteam
             data_journee['home_score'] = home_score
             data_journee['away_score'] = away_score
-            #data_journee['date_scrap'] =  datetime.datetime.today().strftime('%Y-%m-%d').isoformat()
+            data_journee['date_scrap'] =  datetime.datetime.today().isoformat("#","seconds")
 
             return data_journee
 
 
-
-if __name__ == "__main__":
-    print('Essai')
 #saison = ['2000-2001','2001-2002', '2002-2003']
 #saison = ['2003-2004','2005-2006', '2006-2007', '2007-2008','2008-2009','2009-2010']
 #saison = ['2010-2011','2011-2012','2012-2013','2013-2014','2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020','2020-2021']

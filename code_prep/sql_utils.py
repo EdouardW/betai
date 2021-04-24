@@ -42,37 +42,44 @@ class SQLUtil():
                (saison VARCHAR(20),
                 ligue VARCHAR(20),
                 journee INT, 
+                date DATE,
                 id_match VARCHAR(20),
                 result VARCHAR(5),
                 hometeam VARCHAR(50),
                 awayteam VARCHAR(50),
                 home_score VARCHAR(50),
-                away_score VARCHAR(50)
+                away_score VARCHAR(50),
+                date_scrap TIMESTAMP
                 )"""
         list_request.append(request)
         self._run_request('creating table: global match:', list_request)
 
     def import_json(self, data_list):
         list_request = []
-        #for key, value in data_list.items():
-        #values = [x for x in data_list.values()]
+
         request = """
             INSERT into ligue1.global_match 
             VALUES
             (%(saison)s,
             %(ligue)s,
             %(journee)s,
+            %(date)s,
             %(id_match)s,
             %(result)s,
             %(hometeam)s,
             %(awayteam)s,
             %(home_score)s,
-            %(away_score)s) 
-            """
+            %(away_score)s,
+            %(date_scrap)s); """
 
-        self.cursor.execute(request, data_list)
-        self.connection.commit()
-        #self._run_request('import json', list_request)
+        try:
+            self.cursor.execute(request, data_list)
+            self.connection.commit()
+        except (Exception, psycopg2.Error) as error:
+            print(f"Error while IMPORT JSON'", error)
+
+        
+
 
     def close(self):
         self.cursor.close()
