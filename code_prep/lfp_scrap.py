@@ -25,7 +25,8 @@ def sql_insert():
     file_to_load = open('./code_prep/output/lfp/journee/ligue1.json',)
     data_to_load= json.load(file_to_load)
     for journee in data_to_load:
-        sql_client.import_json(journee)
+        for match in journee:
+            sql_client.import_json(match)
 
     response = make_response(json.dumps({"SQL": 'essai'}))
     response.mimetype = 'application/json'
@@ -101,13 +102,13 @@ def get_suivi_journee(saison):
 
     data = []
     print('Scrap saison {}, journee {}'.format(saison, 1))
-    data.append(get_data_journee(driver, saison))
+    data.append([x for x in get_data_journee(driver, saison)])
     
     for journee in range(2, len(liste_journee)+1):
         time.sleep(2)
         print('Scrap saison {}, journee {}'.format(saison, journee))
         driver.get("https://www.ligue1.fr/calendrier-resultats?seasonId={}&matchDay={}".format(saison, journee))
-        data.append(get_data_journee(driver, saison, journee=journee))
+        data.append([x for x in get_data_journee(driver, saison, journee=journee)])
 
     with open(os.path.join(os.path.dirname(__file__), 'output', 'lfp', 'journee','ligue1.json'), 'w') as outfile:
         json.dump(data, outfile)
@@ -128,13 +129,14 @@ def get_data_journee(driver, saison, journee = 1):
     blocs_journee = bloc_calendrier.find_elements_by_xpath("./div")
     blocs_match = bloc_calendrier.find_elements_by_xpath("./ul")
     
+    data_journee = []
     for day, match in zip(blocs_journee, blocs_match):
         date = dateparser.parse(day.text).date().isoformat()
 
         bloc_detail_match = match.find_elements_by_xpath("./li")
         
         for detail in bloc_detail_match:
-            data_journee = {}
+            data_match = {}
 
             hometeam = detail.find_element_by_xpath("./div[@class='clubs-container left']/div[@class='club home']").text
             awayteam = detail.find_element_by_xpath("./div[@class='clubs-container left']/div[@class='club away']").text
@@ -151,19 +153,21 @@ def get_data_journee(driver, saison, journee = 1):
             elif away_score < home_score:
                 result = '1'
             
-            data_journee['saison'] = saison 
-            data_journee['ligue'] = ligue 
-            data_journee['journee'] = journee 
-            data_journee['date'] = date
-            data_journee['id_match'] = id_match
-            data_journee['result'] = result
-            data_journee['hometeam'] = hometeam
-            data_journee['awayteam'] = awayteam
-            data_journee['home_score'] = home_score
-            data_journee['away_score'] = away_score
-            data_journee['date_scrap'] =  datetime.datetime.today().isoformat("#","seconds")
+            data_match['saison'] = saison 
+            data_match['ligue'] = ligue 
+            data_match['journee'] = journee 
+            data_match['date'] = date
+            data_match['id_match'] = id_match
+            data_match['result'] = result
+            data_match['hometeam'] = hometeam
+            data_match['awayteam'] = awayteam
+            data_match['home_score'] = home_score
+            data_match['away_score'] = away_score
+            data_match['date_scrap'] =  datetime.datetime.today().isoformat("#","seconds")
 
-            return data_journee
+            data_journee.append(data_match)
+ 
+    return data_journee
 
 
 #saison = ['2000-2001','2001-2002', '2002-2003']

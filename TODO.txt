@@ -1,0 +1,2 @@
+- Gérer les matchs reportés
+- Gérer les matchs pas encore joués

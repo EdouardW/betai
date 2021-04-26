@@ -38,7 +38,7 @@ class SQLUtil():
     def create_table(self):
         list_request = []
         request = """
-            CREATE TABLE IF NOT EXISTS ligue1.global_match 
+            CREATE TABLE IF NOT EXISTS ligue1.sas_global_match 
                (saison VARCHAR(20),
                 ligue VARCHAR(20),
                 journee INT, 
@@ -56,9 +56,11 @@ class SQLUtil():
 
     def import_json(self, data_list):
         list_request = []
-
+        print('IMPORT JSON')
+        print(data_list)
+        print('---')
         request = """
-            INSERT into ligue1.global_match 
+            INSERT into ligue1.sas_global_match 
             VALUES
             (%(saison)s,
             %(ligue)s,
