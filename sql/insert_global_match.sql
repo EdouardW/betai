@@ -36,8 +36,7 @@ FOR i in rawdata_cursor
 					awayteam,
 					home_score,
 					away_score,
-					date_scrap,
-					status)
+					date_scrap)
 				VALUES(
 					i.saison,
 					i.ligue,
@@ -49,8 +48,7 @@ FOR i in rawdata_cursor
 					i.awayteam,
 					i.home_score,
 					i.away_score,
-					i.date_scrap,
-					i.status);
+					i.date_scrap);
 			ELSE
 				p_nb_existing := p_nb_existing + 1;
 			GET DIAGNOSTICS v_cnt = ROW_COUNT;

@@ -29,13 +29,13 @@ class SQLUtil():
         for request in list_request:
             try:
                 self.cursor.execute(request)
-
+                
             except (Exception, psycopg2.Error) as error:
                 print(f"Error while {step_name} ", error)
 
         self.connection.commit()
 
-    def create_table(self):
+    def create_global_match_tables(self):
         list_request = []
         request = """
             CREATE TABLE IF NOT EXISTS ligue1.sas_global_match 
@@ -53,13 +53,24 @@ class SQLUtil():
                 status VARCHAR(20)
                 )"""
         list_request.append(request)
+        request1 = """CREATE TABLE IF NOT EXISTS ligue1.global_match 
+               (saison VARCHAR(20),
+                ligue VARCHAR(20),
+                journee INT, 
+                date DATE,
+                id_match VARCHAR(20),
+                result VARCHAR(5),
+                hometeam VARCHAR(50),
+                awayteam VARCHAR(50),
+                home_score VARCHAR(50),
+                away_score VARCHAR(50),
+                date_scrap TIMESTAMP
+                )"""
+        list_request.append(request1)
         self._run_request('creating table: global match:', list_request)
 
-    def import_json(self, data_list):
+    def insert_sas_global_match_json(self, data_list):
         list_request = []
-        print('IMPORT JSON')
-        print(data_list)
-        print('---')
         request = """
             INSERT into ligue1.sas_global_match 
             VALUES
@@ -81,9 +92,13 @@ class SQLUtil():
             self.connection.commit()
         except (Exception, psycopg2.Error) as error:
             print(f"Error while IMPORT JSON'", error)
-
-        
-
+   
+    def insert_global_match(self):
+        list_request = []
+        request = """
+            select ligue1.insert_global_match()"""
+        list_request.append(request)
+        self._run_request('Insert into: global match:', list_request)
 
     def close(self):
         self.cursor.close()

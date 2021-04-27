@@ -3,10 +3,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
+from pathlib import Path
 
 from flask import make_response, Response
 from betai_flask import app
 from code_prep.sql_utils import SQLUtil
+from .utils import create_input_folder
 
 import dateparser
 import time
@@ -20,13 +22,18 @@ import datetime
 @app.route('/lfp/sql/insert')
 def sql_insert():
     sql_client = SQLUtil()
-    sql_client.create_table()
+    sql_client.create_global_match_tables()
     
-    file_to_load = open('./code_prep/output/lfp/journee/ligue1.json',)
-    data_to_load= json.load(file_to_load)
-    for journee in data_to_load:
-        for match in journee:
-            sql_client.import_json(match)
+    output_path = Path('output', 'lfp', 'journee')
+    list_files = [x for x in output_path.iterdir()]
+    for file in list_files:
+        file_to_load = open(file)
+        data_to_load= json.load(file_to_load)
+        for journee in data_to_load:
+            for match in journee:
+                sql_client.insert_sas_global_match_json(match)
+
+    sql_client.insert_global_match()
 
     response = make_response(json.dumps({"SQL": 'essai'}))
     response.mimetype = 'application/json'
@@ -104,13 +111,15 @@ def get_suivi_journee(saison):
     print('Scrap saison {}, journee {}'.format(saison, 1))
     data.append([x for x in get_data_journee(driver, saison)])
     
-    for journee in range(2, len(liste_journee)+1):
+    for journee in range(2, len(liste_journee)-35):
         time.sleep(2)
         print('Scrap saison {}, journee {}'.format(saison, journee))
         driver.get("https://www.ligue1.fr/calendrier-resultats?seasonId={}&matchDay={}".format(saison, journee))
         data.append([x for x in get_data_journee(driver, saison, journee=journee)])
 
-    with open(os.path.join(os.path.dirname(__file__), 'output', 'lfp', 'journee','ligue1.json'), 'w') as outfile:
+    output_path = Path('output', 'lfp', 'journee')
+    create_input_folder(output_path)
+    with open(os.path.join(output_path, f'{saison}_ligue1.json'), 'w') as outfile:
         json.dump(data, outfile)
     driver.close()
 
