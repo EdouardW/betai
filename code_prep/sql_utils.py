@@ -49,7 +49,8 @@ class SQLUtil():
                 awayteam VARCHAR(50),
                 home_score VARCHAR(50),
                 away_score VARCHAR(50),
-                date_scrap TIMESTAMP
+                date_scrap TIMESTAMP,
+                status VARCHAR(20)
                 )"""
         list_request.append(request)
         self._run_request('creating table: global match:', list_request)
@@ -72,7 +73,8 @@ class SQLUtil():
             %(awayteam)s,
             %(home_score)s,
             %(away_score)s,
-            %(date_scrap)s); """
+            %(date_scrap)s,
+            'ATRT'); """
 
         try:
             self.cursor.execute(request, data_list)
