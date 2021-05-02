@@ -18,3 +18,14 @@ Utilisations identifiées:
 
 
 ps -ef  | grep gunicorn
+
+
+# Créer l'environnement virtuel 
+```bash
+python3 -m venv .venv
+```
+
+```bash
+source ./venv/bin/activate
+```
+
