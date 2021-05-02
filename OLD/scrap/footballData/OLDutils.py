@@ -11,7 +11,7 @@ PG_PASSWORD = 'dodu'
 PG_PORT = '5432'
 
 
-class SQLUtil():
+class SQLUtilOLD():
 
     @classmethod
     def play_sql(cls, request):

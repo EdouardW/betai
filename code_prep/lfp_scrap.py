@@ -19,25 +19,25 @@ import re
 import datetime
 
 
-@app.route('/lfp/sql/insert')
-def sql_insert():
-    sql_client = SQLUtil()
-    sql_client.create_global_match_tables()
+# @app.route('/lfp/sql/insert')
+# def sql_insert():
+#     sql_client = SQLUtil()
+#     sql_client.create_global_match_tables()
     
-    output_path = Path('output', 'lfp', 'journee')
-    list_files = [x for x in output_path.iterdir()]
-    for file in list_files:
-        file_to_load = open(file)
-        data_to_load= json.load(file_to_load)
-        for journee in data_to_load:
-            for match in journee:
-                sql_client.insert_sas_global_match_json(match)
+#     output_path = Path('output', 'lfp', 'journee')
+#     list_files = [x for x in output_path.iterdir()]
+#     for file in list_files:
+#         file_to_load = open(file)
+#         data_to_load= json.load(file_to_load)
+#         for journee in data_to_load:
+#             for match in journee:
+#                 sql_client.insert_sas_global_match_json(match)
 
-    sql_client.insert_global_match()
+#     sql_client.insert_global_match()
 
-    response = make_response(json.dumps({"SQL": 'essai'}))
-    response.mimetype = 'application/json'
-    return response
+#     response = make_response(json.dumps({"SQL": 'essai'}))
+#     response.mimetype = 'application/json'
+#     return response
 
 def initDriver():
     chrome_options = Options()
@@ -140,8 +140,13 @@ def get_data_journee(driver, saison, journee = 1):
     
     data_journee = []
     for day, match in zip(blocs_journee, blocs_match):
-        date = dateparser.parse(day.text).date().isoformat()
-
+        print('DAY', day.text)
+        try:
+            date = dateparser.parse(day.text).date().isoformat()
+        
+        except:
+            print('DAY non trouvé')
+            
         bloc_detail_match = match.find_elements_by_xpath("./li")
         
         for detail in bloc_detail_match:
